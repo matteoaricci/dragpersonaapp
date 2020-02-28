@@ -5,7 +5,9 @@
     <%= f.text_field :name %><br>
     <%= f.label :drag_name %><br>
     <%= f.text_field :drag_name %><br>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
+    <%= f.label :city_id %><br>
+    <%= f.collection_select :city_id, City.all, :id, :name %><br>
+    <%= f.label :talent_ids, "Talents: " %><br>
+    <%= f.collection_check_boxes :talent_ids, Talent.all, :id, :name %><br><br>
     <%= f.submit %>
 <% end %>
