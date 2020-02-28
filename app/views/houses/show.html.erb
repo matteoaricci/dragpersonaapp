@@ -9,7 +9,7 @@
 <ul>
     <% @house.users.each do |queen| %>
     <li>
-        <%= queen.drag_name %>
+        <%= link_to queen.drag_name, user_path(queen) %>
     </li>
     <% end %>
 </ul>
