@@ -13,15 +13,23 @@ class House < ApplicationRecord
         end
     end
 
+    def the_users
+        self.users.map do |better_variable|
+            if better_variable.talents.first
+            better_variable.talents.first.name 
+            end
+        end
+    end
+
     def common_talent
         hash = {}
         self.users.map { |yee| yee.talents}.each do |yee|
-            if hash[yee]
-                hash[yee] += 1
+            if hash[yee.name]
+                hash[yee.name] += 1
             elsif
-                hash[yee] = 1
+                hash[yee.name] = 1
             end
-           puts hash.max
         end
+        puts hash
     end
 end
