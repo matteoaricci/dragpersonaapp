@@ -1,4 +1,4 @@
-<h1>Edit Account</h1>
+<h1>New User</h1>
 
 <%= form_for @user do |f| %>
     <%= f.label :name, "Full Name: " %><br>
@@ -13,5 +13,5 @@
 <% end %>
 <br>
 <div>
-    <%= link_to "Back to #{@user.drag_name}'s Page", user_path(@user) %>
+    <%= link_to "Back to Users Page", users_path %>
 </div>
