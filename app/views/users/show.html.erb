@@ -17,5 +17,9 @@
         <p>She doesn't have any.</p>
     <% end %>
 </div>
+<%= form_tag(user_path(@user), method: :delete) do %>
+    <%= submit_tag "Delete User" %>
+<% end %>
+
 <button><%= link_to "Edit This Account", edit_user_path(@user) %></button>
 <button><%= link_to "Back to All Users", users_path %></button>
