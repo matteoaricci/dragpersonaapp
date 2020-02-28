@@ -1,0 +1,15 @@
+<h1><%= @user.drag_name %></h1>
+<div>
+    <p>Real Name: <%= @user.name %></p>
+</div>
+<div>
+    <p>Lives in: <%= @user.city.name %></p>
+</div>
+<div>
+    <h3><%= @user.drag_name %>'s Talents: </h3>
+    <ul>
+        <% @user.talents.each do |talent| %>
+            <%= talent.name %>
+        <% end %>
+    </ul>
+</div>
