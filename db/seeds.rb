@@ -37,3 +37,6 @@ ut1 = UserTalent.create(user_id: matt.id, talent_id: lips.id)
 ut2 = UserTalent.create(user_id: bri.id, talent_id: makeup.id)
 ut3 = UserTalent.create(user_id: carl.id, talent_id: fashion.id)
 ut4 = UserTalent.create(user_id: will.id, talent_id: imperse.id)
+
+ed = House.create(name: "Edwards", description: "Belongs to Miss Gay Justin", mother: "Alyssa Edwards")
+parm = House.create(name: "Parmesean", description: "Premo Italian Shit", mother: "Donatella Versace")
