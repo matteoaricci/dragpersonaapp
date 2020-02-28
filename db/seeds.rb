@@ -12,16 +12,21 @@ House.destroy_all
 Talent.destroy_all
 UserTalent.destroy_all
 
-matt = User.create(name: "Matteo Ricci", drag_name: "Auntie Depressant", city_id: 1, house_id: 1)
-bri = User.create(name: "Bri Turner", drag_name: "Amy Bipolar", city_id: 1, house_id: 1)
-carl = User.create(name: "Carl Parm", drag_name: "Lady Footlocker", city_id: 1, house_id: 1)
-paul = User.create(name: "Paul Kim", drag_name: "Mona Lott", city_id: 1, house_id: 1)
-will = User.create(name: "Will Harris", drag_name: "Avery Goodlay", city_id: 1, house_id: 1)
-yo = User.create(name: "Yo Lastname", drag_name: "Annie Mae", city_id: 1, house_id: 1)
-ryan = User.create(name: "Ryan Wilson", drag_name: "Toyotathot", city_id: 1, house_id: 1)
-lauren = User.create(name: "Lauren Yu", drag_name: "Sam O'Nella", city_id: 1, house_id: 1)
-sonata = User.create(name: "Sonata Arrington", drag_name: "Sarah Tonin", city_id: 1, house_id: 1)
-wesley = User.create(name: "Wesley Chen", drag_name: "Heather O'Sexual", city_id: 1, house_id: 1)
-alan = User.create(name: "Alan Banks", drag_name: "Frida Slaves", city_id: 1, house_id: 1)
-valentin = User.create(name: "Valentin Placido", drag_name: "Jack the Stripper", city_id: 1, house_id: 1)
-jason = User.create(name: "Jason Park", drag_name: "Robin Parks", city_id: 1, house_id: 1)
+
+washington = City.create(name: 'Washington, D.C.')
+edwards = House.create(name: "House of Edwards", description: "A house", mother: "A person")
+
+matt = User.create!(name: "Matteo Ricci", drag_name: "Auntie Depressant", house: edwards, city: washington)
+bri = User.create!(name: "Bri Turner", drag_name: "Amy Bipolar", house: edwards, city: washington)
+carl = User.create!(name: "Carl Parm", drag_name: "Lady Footlocker", house: edwards, city: washington)
+paul = User.create!(name: "Paul Kim", drag_name: "Mona Lott", house: edwards, city: washington)
+will = User.create!(name: "Will Harris", drag_name: "Avery Goodlay", house: edwards, city: washington)
+yo = User.create!(name: "Yo Lastname", drag_name: "Annie Mae", house: edwards, city: washington)
+ryan = User.create!(name: "Ryan Wilson", drag_name: "Toyotathot", house: edwards, city: washington)
+lauren = User.create!(name: "Lauren Yu", drag_name: "Sam O'Nella", house: edwards, city: washington)
+sonata = User.create!(name: "Sonata Arrington", drag_name: "Sarah Tonin", house: edwards, city: washington)
+wesley = User.create!(name: "Wesley Chen", drag_name: "Heather O'Sexual", house: edwards, city: washington)
+alan = User.create!(name: "Alan Banks", drag_name: "Frida Slaves", house: edwards, city: washington)
+valentin = User.create!(name: "Valentin Placido", drag_name: "Jack the Stripper", house: edwards, city: washington)
+jason = User.create!(name: "Jason Park", drag_name: "Robin Parks", house: edwards, city: washington)
+
