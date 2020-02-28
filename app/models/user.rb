@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
     validates :name, presence: true
     validates :drag_name, presence: true, uniqueness: {case_sensitive: false}
+
 end

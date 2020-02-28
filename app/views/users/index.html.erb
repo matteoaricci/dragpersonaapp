@@ -2,7 +2,9 @@
 
 <ul>
     <% @users.each do |user| %>
-        <li><%= link_to user.drag_name, user_path(user) %></li>
+        <li><%= link_to user.drag_name, user_path(user) %><br>
+            Number of Talents: <%= user.talents.count %><br>
+        </li>
     <% end %>
 </ul>
 
