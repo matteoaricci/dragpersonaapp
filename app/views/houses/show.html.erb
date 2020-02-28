@@ -1,0 +1,15 @@
+<h1>House of <%= @house.name %></h1>
+
+<h4><%= @house.description %></h4>
+
+<h2>Mother of the House: <%= @house.mother %></h2>
+
+<h3>Members of House of <%= @house.name %> </h3>
+
+<ul>
+    <% @house.users.each do |queen| %>
+    <li>
+        <%= link_to queen.drag_name, user_path(queen) %>
+    </li>
+    <% end %>
+</ul>

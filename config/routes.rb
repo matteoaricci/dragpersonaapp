@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/', to: 'application#homepage', as: 'homepage'
   resources :users, only: [:index, :show, :new, :create, :edit, :update]
   resources :talents, only: [:index, :show, :new, :create]
+  resources :houses, only: [:index, :show]
 end
