@@ -1,0 +1,11 @@
+<h1>All Talents</h1>
+
+<ul>
+    <% @talents.each do |talent| %>
+    <li>
+        <%= link_to talent.name, talent_path(talent) %>
+    </li>
+    <% end %>
+</ul>
+
+<%= link_to "Dont See Your Talent Here???  Make One!!", new_talent_path %>

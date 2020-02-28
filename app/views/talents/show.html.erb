@@ -1,0 +1,16 @@
+<h1><%= @talent.name %></h1>
+
+<h2><%= @talent.description %></h2>
+
+
+<h2>Queens with This Talent</h2>
+
+<ul>
+    <% @talent.users.each do |quen| %>
+    <li>
+        <%= quen.drag_name %>
+    </li>
+</ul>
+<% end %><br>
+<br>
+<%= link_to "Back to Talent Index", talents_path %>

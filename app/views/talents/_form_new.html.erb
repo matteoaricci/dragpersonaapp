@@ -1,0 +1,9 @@
+<%= form_for @talent do |t| %>
+    <%= t.label :name %>
+    <%= t.text_field :name %><br>
+    <br>
+    <%= t.label :description %>
+    <%= t.text_area :description %><br>
+    <br>
+    <%= t.submit %>
+<% end %>
