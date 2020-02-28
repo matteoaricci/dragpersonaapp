@@ -12,17 +12,20 @@ House.destroy_all
 Talent.destroy_all
 UserTalent.destroy_all
 
-matt = User.create(name: "Matteo Ricci", drag_name: "Auntie Depressant", city_id: 1, house_id: nil)
-bri = User.create(name: "Bri Turner", drag_name: "Amy Bipolar", city_id: 1, house_id: nil)
-carl = User.create(name: "Carl Parm", drag_name: "Lady Footlocker", city_id: 1, house_id: nil)
-paul = User.create(name: "Paul Kim", drag_name: "Mona Lott", city_id: 1, house_id: nil)
-will = User.create(name: "Will Harris", drag_name: "Avery Goodlay", city_id: 1, house_id: nil)
-yo = User.create(name: "Yo Park", drag_name: "Annie Mae", city_id: 1, house_id: nil)
-ryan = User.create(name: "Ryan Wilson", drag_name: "Toyotathot", city_id: 1, house_id: nil)
-lauren = User.create(name: "Lauren Yu", drag_name: "Sam O'Nella", city_id: 1, house_id: nil)
-sonata = User.create(name: "Sonata Arrington", drag_name: "Sarah Tonin", city_id: 1, house_id: nil)
-wesley = User.create(name: "Wesley Chen", drag_name: "Heather O'Sexual", city_id: 1, house_id: nil)
-alan = User.create(name: "Alan Banks", drag_name: "Frida Slaves", city_id: 1, house_id: nil)
+washington = City.create(name: "Washington, D.C.")
+matteoshouse = House.create(name: "House of Matteo", description: "Hey bitch", mother: "that bitch stacy")
+
+matt = User.create(name: "Matteo Ricci", drag_name: "Auntie Depressant", city: washington, house: matteoshouse)
+bri = User.create(name: "Bri Turner", drag_name: "Amy Bipolar", city: washington, house: matteoshouse)
+carl = User.create(name: "Carl Parm", drag_name: "Lady Footlocker", city: washington, house: matteoshouse)
+paul = User.create(name: "Paul Kim", drag_name: "Mona Lott", city: washington, house: matteoshouse)
+will = User.create(name: "Will Harris", drag_name: "Avery Goodlay", city: washington, house: matteoshouse)
+yo = User.create(name: "Yo Park", drag_name: "Annie Mae", city: washington, house: matteoshouse)
+ryan = User.create(name: "Ryan Wilson", drag_name: "Toyotathot", city: washington, house: matteoshouse)
+lauren = User.create(name: "Lauren Yu", drag_name: "Sam O'Nella", city: washington, house: matteoshouse)
+sonata = User.create(name: "Sonata Arrington", drag_name: "Sarah Tonin", city: washington, house: matteoshouse)
+wesley = User.create(name: "Wesley Chen", drag_name: "Heather O'Sexual", city: washington, house: matteoshouse)
+alan = User.create(name: "Alan Banks", drag_name: "Frida Slaves", city: washington, house: matteoshouse)
 
 lips = Talent.create(name: "Lip-Syncing", description: "Master of Musical Mimicry")
 makeup = Talent.create(name: "Makeup", description: "You Ever Seen a Mug This Beat?")
