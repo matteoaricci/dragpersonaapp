@@ -1,5 +1,7 @@
 class House < ApplicationRecord
     has_many :users
+    has_many :user_talents, through: :users
+    has_many :talents, through: :user_talents 
 
     def count_users
         self.users.count
@@ -13,21 +15,15 @@ class House < ApplicationRecord
         end
     end
 
-    def the_users
-        self.users.map do |better_variable|
-            if better_variable.talents.first
-            better_variable.talents.first.name 
-            end
-        end
-    end
+    
 
     def common_talent
         hash = {}
-        self.users.map { |yee| yee.talents}.each do |yee|
-            if hash[yee.name]
-                hash[yee.name] += 1
+        self.users.map { |use| use.talents}.each do |talent|
+            if hash[talent]
+                hash[talent] += 1
             elsif
-                hash[yee.name] = 1
+                hash[talent] = 1
             end
         end
         return hash
