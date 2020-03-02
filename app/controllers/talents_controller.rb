@@ -1,11 +1,11 @@
 class TalentsController < ApplicationController
+    before_action :find_talent, only: [:show, :edit, :update, :destroy]
 
     def index
         @talents = Talent.all
     end
 
     def show
-        @talent = Talent.find(params[:id])
     end
 
     def new
@@ -18,9 +18,28 @@ class TalentsController < ApplicationController
         redirect_to talent_path(@talent)
     end
 
+    def edit
+    end
+
+    def update
+        @talent.update(talent_params)
+
+        redirect_to talent_path(@talent)
+    end
+
+    def destroy
+        @talent.destroy
+        redirect_to talents_path
+    end
+
     private
 
     def talent_params
-        params.require(:talent).permit(:name, :description)
+        params.require(:talent).permit(:name, :description, user_ids: [])
     end
+
+    def find_talent
+        @talent = Talent.find(params[:id])
+    end
+
 end
