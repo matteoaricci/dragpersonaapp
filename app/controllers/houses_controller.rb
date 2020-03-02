@@ -14,20 +14,8 @@ class HousesController < ApplicationController
     end
 
     def create
-        @house = House.new(house_params)
-        if @house.valid?
-            @house.save
-            redirect_to house_path(@house)
-        else
-            render new_house_path
-        end
-    end
+        @house = House.create(house_params)
 
-    def edit
-    end
-
-    def update
-        @house.update(house_params)
         redirect_to house_path(@house)
     end
 
@@ -37,11 +25,8 @@ class HousesController < ApplicationController
     end
 
     private
-    def find_house
-        @house = House.find(params[:id])
-    end
 
     def house_params
-        params.require(:house).permit(:name, :description)
+        params.require(:house).permit(:name, :description, :mother, user_ids: [])
     end
 end

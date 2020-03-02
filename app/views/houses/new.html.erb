@@ -7,7 +7,7 @@
     <%= h.label :description %>
     <%= h.text_area :description %><br>
     <br>
+
+    <%= h.collection_select :mother, User.all, :, :drag_name %>
     <%= h.submit %>
 <% end %>
-<br>
-<%= link_to "Back to Houses", houses_path %>
