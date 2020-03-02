@@ -47,3 +47,6 @@ ut2 = UserTalent.create(user_id: bri.id, talent_id: makeup.id)
 ut3 = UserTalent.create(user_id: carl.id, talent_id: fashion.id)
 ut4 = UserTalent.create(user_id: will.id, talent_id: imperse.id)
 
+
+byebug
+0

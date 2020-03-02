@@ -15,8 +15,6 @@ class House < ApplicationRecord
         end
     end
 
-    
-
     def common_talent
         talent_count = {}
         self.users.each { |use|
@@ -30,4 +28,5 @@ class House < ApplicationRecord
             }
       talent_count.key(talent_count.values.max)
     end
+    
 end
