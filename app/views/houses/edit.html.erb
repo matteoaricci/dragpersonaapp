@@ -1,4 +1,4 @@
-<h1>New House Form</h1>
+<h1>Edit House Form</h1>
 
 <%= form_for @house do |h| %>
     <%= h.label :name %>
@@ -7,7 +7,8 @@
     <%= h.label :description %>
     <%= h.text_area :description %><br>
     <br>
-
-    <%= h.collection_select :mother, User.all, :, :drag_name %>
     <%= h.submit %>
+
 <% end %>
+<br>
+<button><%= link_to "Back to Houses Page", houses_path %></button>

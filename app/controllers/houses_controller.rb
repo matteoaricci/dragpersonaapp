@@ -1,11 +1,12 @@
 class HousesController < ApplicationController
 
+    before_action :find_house, only: [:show, :edit, :update]
+
     def index
         @houses = House.all
     end
 
     def show
-        @house = House.find(params[:id])
     end
 
     def new
