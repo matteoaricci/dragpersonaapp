@@ -6,6 +6,7 @@
     <li>User with Most Talents: <%= link_to User.most_talented.drag_name, user_path(User.most_talented.id) %></li>
     <li>User with Longest Drag Name: <%= link_to User.longest_name.drag_name, user_path(User.longest_name.id) %></li>
     <li>Last User Created: <%= link_to User.last_created.drag_name, user_path(User.last_created.id) %></li>
+    <li>Number of Users Without a Talent: <%= User.count_no_talents %></li>
 </div>
 
 <h2>Talents</h2>
@@ -17,4 +18,14 @@
 <h2>Houses</h2>
 <div>
     <li>Number of Houses: <%= House.all.count %></li>
+    <li>Most Popular House: <%= link_to House.most_users.name, house_path(House.most_users.id) %></li>
+    <li>Most Talented House: <%= link_to House.most_talented.name, house_path(House.most_talented.id) %></li>
 </div>
+
+<h2>Cities</h2>
+<div>
+    <li>Number of Cities: <%= City.all.count %></li>
+</div>
+
+<br>
+<button><%= link_to "Home Page", homepage_path %></button>

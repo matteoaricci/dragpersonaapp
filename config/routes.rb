@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :users
   resources :talents
   resources :houses, only: [:index, :show]
+  resources :cities, only: [:index, :show, :new, :edit, :create, :update]
 end

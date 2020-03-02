@@ -28,5 +28,20 @@ class House < ApplicationRecord
             }
       talent_count.key(talent_count.values.max)
     end
-    
+
+    def self.most_users
+        self.all.max_by{ |house| house.count_users }
+    end
+
+    def count_talents
+        total = 0
+        self.users.each do |user|
+            total += user.talents.count
+        end
+        total
+    end
+
+    def self.most_talented
+        self.all.max_by{ |house| house.count_talents }
+    end
 end

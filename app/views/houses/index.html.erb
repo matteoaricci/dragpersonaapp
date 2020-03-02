@@ -3,8 +3,9 @@
 <ul>
     <% @houses.each do |house| %>
     <li>
-        <%= link_to house.name, house_path(house) %> <%= house.count_users %>
+        <%= link_to house.name, house_path(house) %>
     </li>
+    Members: <%= house.count_users %>
     <% end %>
 </ul>
 
