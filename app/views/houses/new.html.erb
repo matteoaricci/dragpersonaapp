@@ -8,4 +8,6 @@
     <%= h.text_area :description %><br>
     <br>
 
+    <%= h.collection_select :mother, User.all, :, :drag_name %>
+    <%= h.submit %>
 <% end %>
