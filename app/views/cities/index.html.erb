@@ -8,6 +8,8 @@
     <% end %>
 </ul>
 <br>
+<h3>Most Populated City: <%= City.highest_pop %></h3>
+<h3>Least Populated City: <%= City.lowest_pop %></h3>
 <button><%= link_to "New City", new_city_path %></button>
 <br>
 <button><%= link_to "Home Page", homepage_path %></button>
