@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#### Drag Yourself ####
+
 User.destroy_all
 City.destroy_all
 House.destroy_all
@@ -14,7 +16,7 @@ UserTalent.destroy_all
 
 matteoshouse = House.create(name: "House of Matteo", description: "Hey bitch", mother: "that bitch stacy")
 ed = House.create(name: "Edwards", description: "Belongs to Miss Gay Justin", mother: "Alyssa Edwards")
-parm = House.create(name: "Parmesean", description: "Premo Italian Shit", mother: "Donatella Versace")
+parm = House.create(name: "Parmesan", description: "Premo Italian Shit", mother: "Donatella Versace")
 
 centreville = City.create(name: "Centreville, VA")
 reston = City.create(name: "Reston, VA")
@@ -29,7 +31,7 @@ paul = User.create(name: "Paul Kim", drag_name: "Mona Lott", city: reston, house
 will = User.create(name: "Will Harris", drag_name: "Avery Goodlay", city: rockville, house: parm)
 yo = User.create(name: "Yo Park", drag_name: "Annie Mae", city: centreville, house: ed)
 ryan = User.create(name: "Ryan Wilson", drag_name: "Toyotathot", city: bethesda, house: matteoshouse)
-lauren = User.create(name: "Lauren Yu", drag_name: "Sam O'Nella", city: reston, house: parm)
+lauren = User.create(name: "Lauren Yu", drag_name: "Cleopatra with a K", city: reston, house: parm)
 sonata = User.create(name: "Sonata Arrington", drag_name: "Sarah Tonin", city: washington, house: ed)
 wesley = User.create(name: "Wesley Chen", drag_name: "Heather O'Sexual", city: washington, house: matteoshouse)
 alan = User.create(name: "Alan Banks", drag_name: "Frida Slaves", city: reston, house: parm)
