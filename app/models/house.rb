@@ -8,10 +8,10 @@ class House < ApplicationRecord
     end
 
     def show_cities
-        self.users.map do |yee|
-            yee.city.name
-        end.each do |yeet|
-            puts yeet 
+        self.users.map do |location|
+            location.city.name
+        end.each do |name|
+            puts name 
         end
     end
 
