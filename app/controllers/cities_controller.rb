@@ -1,6 +1,6 @@
 class CitiesController < ApplicationController
 
-    before_action :find_city, only: [:show, :edit]
+    before_action :find_city, only: [:show, :edit, :update]
 
     def index
         @cities = City.all
@@ -37,6 +37,6 @@ class CitiesController < ApplicationController
     end
 
     def city_params
-        params.require(:city).permit(:name)
+        params.require(:city).permit(:name, user_ids: [])
     end
 end

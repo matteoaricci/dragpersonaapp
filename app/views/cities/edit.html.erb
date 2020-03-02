@@ -1,0 +1,9 @@
+<h1>Edit <%= @city.name %></h1>
+
+<%= form_for @city do |f| %>
+    <%= f.label :name %> <br>
+    <%= f.text_field :name %> <br>
+    <%= f.label :user_ids %> <br>
+    <%= f.collection_check_boxes :user_ids, User.all, :id, :name %> <br>
+    <%= f.submit %>
+<% end %>
