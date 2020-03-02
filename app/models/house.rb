@@ -30,6 +30,6 @@ class House < ApplicationRecord
                 hash[yee.name] = 1
             end
         end
-        puts hash
+        return hash
     end
 end
