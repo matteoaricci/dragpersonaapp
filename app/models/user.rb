@@ -6,4 +6,20 @@ class User < ApplicationRecord
 
     validates :name, presence: true
     validates :drag_name, presence: true, uniqueness: {case_sensitive: false}
+
+    def self.most_talented
+        hash = {}
+        self.all.each do |user|
+            hash[user] = user.talents.count
+        end
+        hash.key(hash.values.max)
+    end
+
+    def self.longest_name
+        self.all.max_by{ |user| user.drag_name.length }
+    end
+
+    def self.last_created
+        self.last
+    end 
 end
