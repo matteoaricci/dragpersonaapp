@@ -6,6 +6,8 @@
 
 <h3>Members of House of <%= @house.name %> </h3>
 
+<h3>Most Common Talent: <%= @house.common_talent %></h3>
+
 <ul>
     <% @house.users.each do |queen| %>
     <li>

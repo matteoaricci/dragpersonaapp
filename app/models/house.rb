@@ -8,23 +8,25 @@ class House < ApplicationRecord
     end
 
     def show_cities
-        self.users.map do |yee|
-            yee.city.name
-        end.each do |yeet|
-            puts yeet 
+        self.users.map do |location|
+            location.city.name
+        end.each do |name|
+            puts name 
         end
     end
 
     def common_talent
-        hash = {}
-        self.users.map { |use| use.talents}.each do |talent|
-            if hash[talent]
-                hash[talent] += 1
-            elsif
-                hash[talent] = 1
+        talent_count = {}
+        self.users.each { |use|
+        if use.talents.any?
+            if talent_count[use.talents[0]["name"]]
+                talent_count[use.talents[0]["name"]] += 1
+            else
+                talent_count[use.talents[0]["name"]] = 1
             end
         end
-        return hash
+            }
+      talent_count.key(talent_count.values.max)
     end
 
     def self.most_users
