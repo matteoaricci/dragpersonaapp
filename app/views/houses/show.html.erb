@@ -15,6 +15,10 @@
     </li>
     <% end %>
 </ul>
+<%= form_tag house_path(@house), method: :delete do %>
+    <%= submit_tag "Delete House" %>
+<% end %>
+<br>
 <button><%= link_to "Edit House", edit_house_path(@house) %></button>
 <br>
 <button><%= link_to "Back to Houses Page", houses_path %></button>
