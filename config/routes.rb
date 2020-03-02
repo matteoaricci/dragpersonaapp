@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get '/analytics', to: 'application#analytics', as: 'analytics'
   resources :users
   resources :talents
-  resources :houses, only: [:index, :show, :new, :create, :edit, :update, :destroy]
-  resources :cities, only: [:index, :show, :new, :edit, :create, :update, :destory]
+  resources :houses
+  resources :cities
 end
