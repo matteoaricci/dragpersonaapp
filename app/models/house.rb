@@ -15,8 +15,6 @@ class House < ApplicationRecord
         end
     end
 
-    
-
     def common_talent
         hash = {}
         self.users.map { |use| use.talents}.each do |talent|
