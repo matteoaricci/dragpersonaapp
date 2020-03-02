@@ -1,0 +1,12 @@
+<h1><%= @city.name %></h1>
+
+<h2>Drag Queens in this City:</h2>
+<ul>
+    <% @city.users.each do |user| %>
+        <li>
+            <%= link_to user.drag_name, user_path(user) %>
+        </li>
+    <% end %>
+</ul>
+
+<button><%= link_to "Cities Page", cities_path %></button>

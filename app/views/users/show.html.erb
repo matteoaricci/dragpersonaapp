@@ -3,7 +3,7 @@
     <p>Real Name: <%= @user.name %></p>
 </div>
 <div>
-    <p>Lives in: <%= @user.city.name %></p>
+    <p>Lives in: <%= link_to @user.city.name, city_path(@user.city) %></p>
 </div>
 <div>
     <h3><%= @user.drag_name %>'s Talents: </h3>
