@@ -1,9 +1,16 @@
 <h1>Login</h1>
 
+<<<<<<< HEAD
 <%= flash.notice %>
 
 <%= form_tag ("/login", method: "post") do %>
     <%= label_tag :drag_name %>
     <%= text_field_tag :drag_name %>
     <%= submit_tag “Login” %>
+=======
+<%= form_tag '/login' do %>
+    <%= label_tag :drag_name %>
+    <%= text_field_tag :drag_name %>
+    <%= submit_tag "Login" %>
+>>>>>>> matteo
 <% end %>
