@@ -32,7 +32,7 @@ will = User.create(name: "Will Harris", drag_name: "Avery Goodlay", city: rockvi
 yo = User.create(name: "Yo Park", drag_name: "Annie Mae", city: centreville, house: ed)
 ryan = User.create(name: "Ryan Wilson", drag_name: "Toyotathot", city: bethesda, house: matteoshouse)
 lauren = User.create(name: "Lauren Yu", drag_name: "Cleopatra with a K", city: reston, house: parm)
-sonata = User.create(name: "Sonata Arrington", drag_name: "Sarah Tonin", city: washington, house: ed)
+sonata = User.create(name: "Sonata Arrington", drag_name: "Sarah Tonin", city: washington, house: nil)
 wesley = User.create(name: "Wesley Chen", drag_name: "Heather O'Sexual", city: washington, house: matteoshouse)
 alan = User.create(name: "Alan Banks", drag_name: "Frida Slaves", city: reston, house: parm)
 
@@ -48,5 +48,3 @@ ut3 = UserTalent.create(user_id: carl.id, talent_id: fashion.id)
 ut4 = UserTalent.create(user_id: will.id, talent_id: imperse.id)
 
 
-byebug
-0

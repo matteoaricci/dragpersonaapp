@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     end
     
     def edit
+        @user.build_house
     end
     
     def update
@@ -39,7 +40,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:name, :drag_name, :city_id, :house_id, talent_ids: [])
+        params.require(:user).permit(:name, :drag_name, :city_id, :house_id, talent_ids: [], house_attributes: [:name, :description])
     end
 
     def find_user

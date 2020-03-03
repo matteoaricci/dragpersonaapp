@@ -4,6 +4,8 @@ class User < ApplicationRecord
     belongs_to :city
     belongs_to :house, optional: true
 
+    accepts_nested_attributes_for :house
+
     validates :name, presence: true
     validates :drag_name, presence: true, uniqueness: {case_sensitive: false}
 

@@ -9,7 +9,19 @@
     <%= f.collection_select :city_id, City.all, :id, :name %><br>
     <%= f.label :talent_ids, "Talents: " %><br>
     <%= f.collection_check_boxes :talent_ids, Talent.all, :id, :name %><br><br>
+    
+    <div class="house_part">
+        <%= f.fields_for :house do |h| %>
+        <h2>Become the Mother of a New House</h2>
+        <%= h.label :name, "House Name"%>
+        <%= h.text_field :name %><br>
+        <br>
+        <%= h.label :description %>
+        <%= h.text_area :description %>
+        <% end %><br><br>
+    </div>
     <%= f.submit %>
+
 <% end %>
 <br>
 <div>
