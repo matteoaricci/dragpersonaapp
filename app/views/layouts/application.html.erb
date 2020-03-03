@@ -10,6 +10,14 @@
   </head>
 
   <body>
+  <div class="header">
+    <% if session[:user_id] %>
+    <h4>Welcome back <%= User.find(session[:user_id]).drag_name %></h4>
+    <h5><%= link_to "Logout",logout_path %></h5>
+    <% else %>
+    <%= link_to "Login", login_path %>
+    <% end %>
     <%= yield %>
+  </div>
   </body>
 </html>
