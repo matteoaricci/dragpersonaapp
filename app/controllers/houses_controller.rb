@@ -25,9 +25,6 @@ class HousesController < ApplicationController
     end
 
     private
-    def find_house
-        @house = House.find(params[:id])
-    end
 
     def house_params
         params.require(:house).permit(:name, :description, :mother, user_ids: [])
