@@ -1,6 +1,6 @@
 class HousesController < ApplicationController
 
-    before_action :find_house, only: [:show, :edit, :update]
+    before_action :find_house, only: [:show, :edit, :update, :destroy]
 
     def index
         @houses = House.all
@@ -17,6 +17,11 @@ class HousesController < ApplicationController
         @house = House.create(house_params)
 
         redirect_to house_path(@house)
+    end
+
+    def destroy
+        @house.destroy
+        redirect_to houses_path
     end
 
     private
