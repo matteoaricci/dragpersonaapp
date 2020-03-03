@@ -3,6 +3,7 @@ class User < ApplicationRecord
     has_many :talents, through: :user_talents
     belongs_to :city
     belongs_to :house, optional: true
+    has_secure_password
 
     accepts_nested_attributes_for :house
 

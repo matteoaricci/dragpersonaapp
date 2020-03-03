@@ -47,7 +47,9 @@ ActiveRecord::Schema.define(version: 2020_03_03_141608) do
     t.integer "house_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "mother", default: false, null: false
+    t.integer "admin", default: 1
+    t.string "username"
+    t.string "password_digest"
   end
 
 end

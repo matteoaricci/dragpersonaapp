@@ -1,9 +1,14 @@
 <h1>Login</h1>
 
-<%= flash.notice %>
+<%= flash[:login_warning] %>
+<%= image_tag("roxxxyoncomputer.jpg") %>
 
 <%= form_tag '/login' do %>
-    <%= label_tag :drag_name %>
-    <%= text_field_tag :drag_name %>
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
     <%= submit_tag "Login" %>
 <% end %>
+
+<%= link_to "Not Yet a Queen??? Girl Make One", new_user_path %>

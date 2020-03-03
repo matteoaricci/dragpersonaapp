@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#logout', as: 'logout'
+  get '/logoutyes', to: 'sessions#logout_yes', as: 'logouts'
   resources :users
   resources :talents
   resources :houses
