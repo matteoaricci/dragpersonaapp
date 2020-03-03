@@ -4,9 +4,13 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(drag_name: params[:drag_name])
-    session[:user_id] = user.id
-
-    redirect_to users_path
+    if user
+      session[:user_id] = user.id
+      redirect_to users_path
+    else
+      flash[:notice] = "No Queen Was Found Sweaty"
+      render :new
+    end
   end
   
   def logout

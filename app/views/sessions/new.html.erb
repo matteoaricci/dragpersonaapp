@@ -1,5 +1,7 @@
 <h1>Login</h1>
 
+<%= flash.notice %>
+
 <%= form_tag '/login' do %>
     <%= label_tag :drag_name %>
     <%= text_field_tag :drag_name %>
