@@ -7,7 +7,5 @@
     <%= h.label :description %>
     <%= h.text_area :description %><br>
     <br>
-
-    <%= h.collection_select :mother, User.all, :id, :drag_name %>
     <%= h.submit %>
 <% end %>

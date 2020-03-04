@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+    helper_method :current_user
 
     def index
     end
@@ -12,7 +13,7 @@ class ApplicationController < ActionController::Base
         else
             @current_user = nil
         end
-        return @current_user
+        @current_user
     end
     
     def admin
