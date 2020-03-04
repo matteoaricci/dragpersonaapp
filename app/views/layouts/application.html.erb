@@ -20,7 +20,7 @@
     <% if controller.controller_name != "sessions" %>
       <% if session[:user_id] %>
         <div>
-          <h4 class="logged_in_text">Hey Kitty Girl, <%= User.find(session[:user_id]).drag_name %></h4>
+          <h4 class="logged_in_text">Hey Kitty Girl, <%= link_to User.find(session[:user_id]).drag_name, user_path(current_user) %></h4>
           <h5 class="logged_in_text"><%= link_to "Logout",logout_path %></h5>
         </div>
       <% else %>

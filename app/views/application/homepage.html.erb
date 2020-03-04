@@ -1,18 +1,35 @@
-<h1>Drag Yourself</h1>
 
-<div>
-    <%= link_to "Users", users_path %>
-</div>
-<div>
-    <%= link_to "Talents", talents_path %>
-</div>
-<div>
-    <%= link_to "Houses", houses_path %>
-</div>
-<div>
-    <%= link_to "Cities", cities_path %>
-</div>
-<br><br>
-<div>
-    <%= link_to "Analytics", analytics_path %>
-</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <%= image_tag("roxxxywithgun.jpg", class:"card_image_top cards", alt:"user_image") %>
+                <div class="card-body">
+                  <h5 class="card-title">All Queens</h5>
+                  <p class="card-text">Look at all the queens on the site.</p>
+                  <a href="/users" class="btn btn-light">Go</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <%= image_tag("roxxxywithgun.jpg", class:"card_image_top cards", alt:"user_image") %>
+                <div class="card-body">
+                  <h5 class="card-title">All Talents</h5>
+                  <p class="card-text">Look at all the talents on the site.</p>
+                  <a href="/talents" class="btn btn-light">Go</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <%= image_tag("roxxxywithgun.jpg", class:"card_image_top cards", alt:"user_image") %>
+                <div class="card-body">
+                  <h5 class="card-title">All Cities</h5>
+                  <p class="card-text">Look at all the cities on the site.</p>
+                  <a href="/cities" class="btn btn-light">Go</a>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>

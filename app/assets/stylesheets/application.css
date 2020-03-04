@@ -40,6 +40,7 @@
      padding-right: 5%;
      padding-top: 2%;
      font-family: 'Times New Roman', Times, serif;
+     min-height: 100%;
  }
 
  .logo {
@@ -48,7 +49,7 @@
 
  .logo_text {
      vertical-align: middle;
-     font-size: x-large;
+     font-size: xx-large;
  }
 
  .logged_in_text {
@@ -62,7 +63,7 @@
   
   /* visited link */
   a:visited {
-    color: rgba(255, 85, 198, 0.233);
+    color: lightcoral;
   }
   
   /* mouse over link */
@@ -72,6 +73,13 @@
   
   /* selected link */
   a:active {
-    color: rgb(255, 164, 228);
+    color: lightcoral;
   }
   
+  .login_box {
+      height: 200px;
+  }
+
+  .cards {
+    max-width: 100%;
+  }
