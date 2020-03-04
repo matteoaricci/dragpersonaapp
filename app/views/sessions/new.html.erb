@@ -1,7 +1,19 @@
 <h1>Login</h1>
 
-<%= form_tag '/login' do %>
+
+
+<%= flash.notice %>
+
+<%= form_tag ("/login", method: "post") do %>
     <%= label_tag :drag_name %>
     <%= text_field_tag :drag_name %>
-    <%= submit_tag "Login" %>
+    <%= submit_tag “Login” %>
+
+<%= flash[:login_warning] %>
+<%= image_tag("roxxxyoncomputer.jpg") %>
+
 <% end %>
+
+
+<%= link_to "Not Yet a Queen??? Girl Make One", new_user_path %>
+
