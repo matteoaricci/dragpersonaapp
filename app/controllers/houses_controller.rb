@@ -15,7 +15,12 @@ class HousesController < ApplicationController
 
     def create
         @house = House.create(house_params)
-
+        @house.update(mother: current_user.username)
+        if current_user.admin < 3
+        current_user.update(admin: 2, house_id: @house.id)
+        elsif current_user.admin == 3
+            current_user.update(house_id: @house.id)
+        end
         redirect_to house_path(@house)
     end
 
@@ -27,7 +32,7 @@ class HousesController < ApplicationController
     private
 
     def house_params
-        params.require(:house).permit(:name, :description, :mother, user_ids: [])
+        params.require(:house).permit(:name, :description)
     end
 
     def find_house
