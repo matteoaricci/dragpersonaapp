@@ -11,8 +11,8 @@
 
   <body>
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="/home">
-        <%= image_tag("drag_yourself_logo.png", :height => "50%", class:"d-inline-block align-top", alt:"logo") %>
+      <a class="navbar-brand logo_text" href="/home">
+        <%= image_tag("drag_yourself_logo.png", class:"d-inline-block align-top logo", alt:"logo") %>
         Drag Yourself
       </a>
     </nav>
@@ -20,7 +20,7 @@
     <% if controller.controller_name != "sessions" %>
 
       <% if session[:user_id] %>
-      <h4>Hey Kitty Girl, <%= User.find(session[:user_id]).drag_name %></h4>
+      <h4 class="logged_in_text">Hey Kitty Girl, <%= User.find(session[:user_id]).drag_name %></h4>
       <h5><%= link_to "Logout",logout_path %></h5>
       <% else %>
       <%= link_to "Login", login_path %>

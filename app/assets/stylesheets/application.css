@@ -41,3 +41,16 @@
      padding-top: 2%;
      font-family: 'Times New Roman', Times, serif;
  }
+
+ .logo {
+     max-width: 10%;
+ }
+
+ .logo_text {
+     vertical-align: baseline;
+ }
+
+ .logged_in_text {
+    text-align: right;
+    font-size: smaller;
+ }
