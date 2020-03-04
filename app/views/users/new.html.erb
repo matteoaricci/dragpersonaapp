@@ -8,6 +8,11 @@
 <% end %>
 
 <%= form_for @user do |f| %>
+    <%= f.label :username %><br>
+    <%= f.text_field :username %><br>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %><br>
+    <br>
     <%= f.label :name, "Full Name: " %><br>
     <%= f.text_field :name %><br>
     <%= f.label :drag_name, "Drag Name: " %><br>
