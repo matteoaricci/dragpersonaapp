@@ -2,7 +2,7 @@
 
 <h4><%= @house.description %></h4>
 
-<h2>Mother of the House: <%= @house.mother %></h2>
+<h2>Mother of the House: <%= @mother.drag_name %></h2>
 
 <h3>Most Common Talent: <%= @house.common_talent %></h3>
 
@@ -14,10 +14,12 @@
     </li>
     <% end %>
 </ul>
+<% if @mother == current_user %>
 <%= form_tag house_path(@house), method: :delete do %>
     <%= submit_tag "Delete House" %>
 <% end %>
 <br>
 <button><%= link_to "Edit House", edit_house_path(@house) %></button>
+<% end %>
 <br>
 <button><%= link_to "Back to Houses Page", houses_path %></button>

@@ -14,18 +14,14 @@ House.destroy_all
 Talent.destroy_all
 UserTalent.destroy_all
 
-matteoshouse = House.create(name: "House of Matteo", description: "Hey bitch", mother: "that bitch stacy")
-ed = House.create(name: "Edwards", description: "Belongs to Miss Gay Justin", mother: "Alyssa Edwards")
-parm = House.create(name: "Parmesan", description: "Premo Italian Shit", mother: "Donatella Versace")
-
 centreville = City.create(name: "Centreville, VA")
 reston = City.create(name: "Reston, VA")
 bethesda = City.create(name: "Bethesda, MD")
 rockville = City.create(name: "Rockville, MD")
 washington = City.create(name: "Washington, D.C.")
 
-matt = User.create(name: "Matteo Ricci", drag_name: "Auntie Depressant", city: washington, house: matteoshouse, username: "matt", password: "girl", admin: 3)
-bri = User.create(name: "Bri Turner", drag_name: "Amy Bipolar", city: centreville, house: parm, username: "blt", password: "girl", admin: 3)
+matt = User.create(name: "Matteo Ricci", drag_name: "Auntie Depressant", city: washington, house: nil, username: "matt", password: "girl", admin: 3)
+bri = User.create(name: "Bri Turner", drag_name: "Amy Bipolar", city: centreville, house: nil, username: "blt", password: "girl", admin: 3)
 # carl = User.create(name: "Carl Parm", drag_name: "Lady Footlocker", city: bethesda, house: ed)
 # paul = User.create(name: "Paul Kim", drag_name: "Mona Lott", city: reston, house: matteoshouse)
 # will = User.create(name: "Will Harris", drag_name: "Avery Goodlay", city: rockville, house: parm)

@@ -1,11 +1,13 @@
 <h1>Edit House Form</h1>
 
 <%= form_for @house do |h| %>
-    <%= h.label :name %>
+    <%= h.label :name %> <br>
     <%= h.text_field :name %><br>
     <br>
-    <%= h.label :description %>
+    <%= h.label :description %> <br>
     <%= h.text_area :description %><br>
+    <%= h.label :user_ids, "Add Queens: " %> <br>
+    <%= h.collection_check_boxes :user_ids, User.all, :id, :drag_name %> <br>
     <br>
     <%= h.submit %>
 

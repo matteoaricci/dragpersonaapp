@@ -1,6 +1,7 @@
 class HousesController < ApplicationController
 
     before_action :find_house, only: [:show, :edit, :update, :destroy]
+    before_action :find_mother, only: [:show, :edit, :update]
 
     def index
         @houses = House.all
@@ -24,6 +25,14 @@ class HousesController < ApplicationController
         redirect_to house_path(@house)
     end
 
+    def edit
+    end
+
+    def update
+        @house.update(house_params)
+        redirect_to house_path(@house)
+    end
+
     def destroy
         @house.destroy
         redirect_to houses_path
@@ -32,10 +41,15 @@ class HousesController < ApplicationController
     private
 
     def house_params
-        params.require(:house).permit(:name, :description)
+        params.require(:house).permit(:name, :description, user_ids: [])
     end
 
     def find_house
         @house = House.find(params[:id])
+    end
+
+    def find_mother
+        @mother = User.find_by(username: @house.mother)
+        return @mother
     end
 end
