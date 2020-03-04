@@ -27,3 +27,8 @@
  .subtitle {
      font-size: small;
  }
+
+ html {
+     background: url(spikes.png);
+     background-repeat: repeat;
+ }

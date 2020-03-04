@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
     before_action :find_user, only: [:show, :edit, :update, :destroy]
+    before_action :is_current_user, only: [:edit, :update, :destroy]
     
     def index
         @users = User.all.order(params[:talents])
@@ -52,4 +53,10 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end
 
+    def is_current_user
+        if @user.id != current_user.id
+            flash[:notice] = "You shady bitch"
+            render :show
+        end
+    end
 end

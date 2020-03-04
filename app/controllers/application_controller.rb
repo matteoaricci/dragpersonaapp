@@ -15,15 +15,15 @@ class ApplicationController < ActionController::Base
         return @current_user
     end
     
-    def admin
+    def is_admin
         flash[:login_warning] = "Learn Your Place Sweaty"
         redirect_to users_path unless current_user.admin == 3
     end
 
-    def authorized
-        flash[:login_warning] = "You must be logged in to see this page Sweaty"
-        redirect_to login_path unless logged_in?
-    end
+    # def authorized
+    #     flash[:login_warning] = "You must be logged in to see this page Sweaty"
+    #     redirect_to login_path unless logged_in?
+    # end
 
     def logged_in?
         !!current_user
