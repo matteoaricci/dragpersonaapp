@@ -47,10 +47,31 @@
  }
 
  .logo_text {
-     vertical-align: baseline;
+     vertical-align: middle;
+     font-size: x-large;
  }
 
  .logged_in_text {
     text-align: right;
     font-size: medium;
  }
+
+ a:link {
+    color: rgb(97, 171, 255);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgba(255, 85, 198, 0.233);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: pink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(255, 164, 228);
+  }
+  
