@@ -10,11 +10,19 @@ class ApplicationController < ActionController::Base
 
     def current_user
         if session[:user_id]
-            @current_user ||= User.find(session[:user_id]).drag_name
+            @current_user ||= User.find(session[:user_id])
         else
-            @current_user = “Guest”
+            @current_user = nil
         end
         return @current_user
+    end
+
+    def admin
+        current_user.admin == 3
+    end
+
+    def mother
+        current_user.admin >= 2
     end
     
 end
