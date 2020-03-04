@@ -29,6 +29,15 @@
  }
 
  html {
-     background: url(spikes.png);
+     background: url(pink_rice.png);
      background-repeat: repeat;
+ }
+
+ body {
+     margin-right: 10%;
+     margin-left: 10%;
+     padding-left: 5%;
+     padding-right: 5%;
+     padding-top: 2%;
+     font-family: 'Times New Roman', Times, serif;
  }

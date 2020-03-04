@@ -2,14 +2,20 @@
 <html>
   <head>
     <title>Drag Yourself</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="/home">
+        <%= image_tag("drag_yourself_logo.png", :height => "50%", class:"d-inline-block align-top", alt:"logo") %>
+        Drag Yourself
+      </a>
+    </nav>
   <div class="header">
     <% if controller.controller_name != "sessions" %>
 
@@ -25,8 +31,8 @@
     <% if flash[:login_warning] %>
       <%= flash[:login_warning] %>
     <% end %>
+  </div>
     
     <%= yield %>
-  </div>
   </body>
 </html>
