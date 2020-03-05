@@ -152,6 +152,15 @@
   font-size: medium;
 }
 
+.rounded_button_medium {
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: rgb(243, 204, 205);
+  padding: 14px 28px;
+  font-size: medium;
+}
+
 .rounded_button_small a:visited{
   color: rgb(26, 26, 26);
 }
@@ -163,6 +172,20 @@
   color: rgb(26, 26, 26);
 }
 .rounded_button_small a:hover{
+  color: white;
+}
+
+.rounded_button_medium a:visited{
+  color: rgb(26, 26, 26);
+}
+
+.rounded_button_medium a:link{
+  color: rgb(26, 26, 26);
+}
+.rounded_button_medium a:active{
+  color: rgb(26, 26, 26);
+}
+.rounded_button_medium a:hover{
   color: white;
 }
 
@@ -207,4 +230,8 @@
 .bottom {
   bottom: 7%;
   position: fixed;
+}
+
+.pink_text {
+  color: lightcoral;
 }

@@ -1,11 +1,14 @@
+<br>
 <h1>New House Form</h1>
-
+<hr>
 <%= form_for @house do |h| %>
     <%= h.label :name, "House Name: " %> <br>
     <%= h.text_field :name %><br>
-    <br>
     <%= h.label :description, "Description: " %> <br>
     <%= h.text_area :description %><br>
     <br>
-    <%= h.submit %>
+    <%= h.submit class:"rounded_button_small" %>
 <% end %>
+
+<br>
+<button class="rounded_button bottom"><%= link_to "Back to Houses", houses_path %></button>

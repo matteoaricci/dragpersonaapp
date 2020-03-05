@@ -13,9 +13,12 @@
     <% end %>
 </ul>
 <br>
-<button><%= link_to "Edit", edit_talent_path(@talent) %></button>
-<%= form_tag(talent_path(@talent), method: :delete) do %>
-    <%= submit_tag "Delete Talent" %>
+<% if current_user.admin == 3 %>
+    <button class="rounded_button_small"><%= link_to "Edit Talent", edit_talent_path(@talent) %></button>
+    <br>
+    <%= form_tag(talent_path(@talent), method: :delete) do %>
+        <%= submit_tag "Delete Talent", class:"rounded_button_small" %>
+    <% end %>
 <% end %>
 <br>
-<%= link_to "Back to Talent Index", talents_path %>
+<button class="rounded_button bottom"><%= link_to "Back to Talent Index", talents_path %></button>

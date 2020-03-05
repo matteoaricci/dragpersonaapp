@@ -9,8 +9,8 @@
     <%= h.label :user_ids, "Add Queens: " %> <br>
     <%= h.collection_check_boxes :user_ids, User.all, :id, :drag_name %> <br>
     <br>
-    <%= h.submit %>
+    <%= h.submit class:"rounded_button_small" %>
 
 <% end %>
 <br>
-<button><%= link_to "Back to Houses Page", houses_path %></button>
+<button class="rounded_button bottom"><%= link_to "Back to House Page", house_path(@house) %></button>

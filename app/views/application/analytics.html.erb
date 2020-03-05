@@ -3,7 +3,7 @@
 <hr>
 <br>
 <div class="analytics_columns">
-    <h2>Users</h2>
+    <h2 class="pink_text">Users</h2>
     <div>
         <li>Number of Users: <%= User.all.count %></li>
         <li>User with Most Talents: <%= link_to User.most_talented.drag_name, user_path(User.most_talented.id) %></li>
@@ -12,19 +12,19 @@
         <li>Number of Users Without a Talent: <%= User.count_no_talents %></li>
     </div>
 
-    <h2>Talents</h2>
+    <h2 class="pink_text">Talents</h2>
     <div>
         <li>Number of Talents: <%= Talent.all.count %></li>
         <li>Most Occuring Talent: <%= link_to Talent.most_users.name, talent_path(Talent.most_users.id) %></li>
     </div>
-    <h2>Houses</h2>
+    <h2 class="pink_text">Houses</h2>
     <div>
         <li>Number of Houses: <%= House.all.count %></li>
         <li>Most Popular House: <%= link_to House.most_users.name, house_path(House.most_users.id) %></li>
         <li>Most Talented House: <%= link_to House.most_talented.name, house_path(House.most_talented.id) %></li>
     </div>
 
-    <h2>Cities</h2>
+    <h2 class="pink_text">Cities</h2>
     <div>
         <li>Number of Cities: <%= City.all.count %></li>
         <li>Most Populated City: <%= City.highest_pop %></li>

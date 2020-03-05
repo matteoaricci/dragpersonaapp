@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     before_action :find_user, only: [:show, :edit, :update, :destroy]
     before_action :is_current_user, only: [:edit, :update, :destroy]
-    before_action :boot_out
+    before_action :boot_out, except: [:new, :create]
 
     
     def index
