@@ -1,10 +1,10 @@
 <h1>New House Form</h1>
 
 <%= form_for @house do |h| %>
-    <%= h.label :name %>
+    <%= h.label :name, "House Name: " %> <br>
     <%= h.text_field :name %><br>
     <br>
-    <%= h.label :description %>
+    <%= h.label :description, "Description: " %> <br>
     <%= h.text_area :description %><br>
     <br>
     <%= h.submit %>
