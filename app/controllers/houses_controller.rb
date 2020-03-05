@@ -2,6 +2,8 @@ class HousesController < ApplicationController
 
     before_action :find_house, only: [:show, :edit, :update, :destroy]
     before_action :mother, only: [:show, :edit, :update, :destroy]
+    before_action :boot_out
+
 
     def index
         @houses = House.all

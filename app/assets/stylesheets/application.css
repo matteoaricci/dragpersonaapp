@@ -185,3 +185,8 @@
 .pink_text_button:hover {
   color: black;
 }
+
+.circular_image {
+  border-radius: 50%;
+  width: 10%;
+}

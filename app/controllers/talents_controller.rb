@@ -1,5 +1,7 @@
 class TalentsController < ApplicationController
     before_action :find_talent, only: [:show, :edit, :update, :destroy]
+    before_action :boot_out
+
 
     def index
         @talents = Talent.all

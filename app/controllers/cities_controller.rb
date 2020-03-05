@@ -2,6 +2,7 @@ class CitiesController < ApplicationController
 
     before_action :find_city, only: [:show, :edit, :update]
     before_action :admin, only: [:edit, :update]
+    before_action :boot_out
 
     def index
         @cities = City.all
