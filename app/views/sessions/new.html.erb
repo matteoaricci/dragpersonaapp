@@ -1,8 +1,7 @@
 <body class="login_body">
 <h1 style="text-align: left;">Login</h1>
 
-
-<br><br>
+<br>
 <div class="login_form">
 <%= form_tag '/login' do %>
     <h4> <%= label_tag :username %>
@@ -15,6 +14,6 @@
 <% end %>
 
 <br>
-<button class="rounded_button rounded"><%= link_to "Make a New Queen", new_user_path %></button>
+<button class="rounded_button rounded" ><%= link_to "Make a New Queen", new_user_path %></button>
    </div>
 </body>

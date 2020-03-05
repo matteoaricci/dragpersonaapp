@@ -59,7 +59,7 @@
  }
 
  a:link {
-    color: rgb(97, 171, 255);
+    color: lightcoral;
   }
   
   /* visited link */
@@ -105,8 +105,10 @@
     border: none;
     background-color: rgb(243, 204, 205);
     padding: 14px 28px;
-    font-size: 16px;
+    font-size: large;
   }
+
+
 
 .button_pink {
   background-color: rgb(243, 204, 205);
@@ -123,3 +125,19 @@
   
   position: relative;
 }
+
+.rounded_button a:visited{
+  color: rgb(26, 26, 26);
+}
+
+.rounded_button a:link{
+  color: rgb(26, 26, 26);
+}
+.rounded_button a:active{
+  color: rgb(26, 26, 26);
+}
+.rounded_button a:hover{
+  color: white;
+}
+
+
