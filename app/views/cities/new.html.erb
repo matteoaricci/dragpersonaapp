@@ -1,9 +1,10 @@
 <h1>Make a New City</h1>
-
+<hr>
+<br><br>
 <%= form_for @city do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.submit %>
+    <%= f.label :name, "Name of City:" %><br>
+    <%= f.text_field :name %><br><br>
+    <%= f.submit class:"rounded_button_small" %>
 <% end %>
 <br>
-<button><%= link_to "Cities Page", cities_path %></button>
+<button class="rounded_button bottom"><%= link_to "Cities Page", cities_path %></button>
