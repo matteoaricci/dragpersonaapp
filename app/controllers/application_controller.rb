@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 
+    before_action :boot_out, only: [:analytics]
+
     helper_method :current_user
     helper_method :logged_in
 

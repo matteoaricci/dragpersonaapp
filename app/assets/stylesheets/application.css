@@ -196,3 +196,11 @@
   border-radius: 50%;
   width: 10%;
 }
+
+.analytics_columns {
+  column-count: 2;
+  column-gap: 20px;
+  column-rule-style: solid;
+  column-width: 1px;
+  column-fill: auto;
+}
