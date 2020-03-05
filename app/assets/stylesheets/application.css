@@ -106,8 +106,7 @@
 
   .rounded_button {
     display: block;
-    width: 85%;
-    margin: auto;
+    width: 35%;
     border: none;
     background-color: rgb(243, 204, 205);
     padding: 14px 28px;
@@ -203,4 +202,9 @@
   column-rule-style: solid;
   column-width: 1px;
   column-fill: auto;
+}
+
+.bottom {
+  bottom: 7%;
+  position: fixed;
 }

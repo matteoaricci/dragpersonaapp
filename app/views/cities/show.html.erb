@@ -1,17 +1,21 @@
 <h1><%= @city.name %></h1>
 
-<h2>Drag Queens in this City:</h2>
-<ul>
-    <% @city.users.each do |user| %>
-        <li>
-            <%= link_to user.drag_name, user_path(user) %>
-        </li>
-    <% end %>
-</ul>
+<h2>Drag Queens:</h2>
+<% if @city.users.any? %>
+    <ul>
+        <% @city.users.each do |user| %>
+            <li>
+                <%= link_to user.drag_name, user_path(user) %>
+            </li>
+        <% end %>
+    </ul>
+<% else %>
+    <p>There are no Queens in this city.</p>
+<% end %>
 <br>
 <% if current_user.admin == 3 %>
     <button class="rounded_button_small"><%= link_to "Edit City", edit_city_path(@city) %></button>
 <% end %>
 <br><br>
 <br>
-<button class="rounded_button"><%= link_to "Cities Page", cities_path %></button>
+<button class="rounded_button bottom"><%= link_to "Cities Page", cities_path %></button>

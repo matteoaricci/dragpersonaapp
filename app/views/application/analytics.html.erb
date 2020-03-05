@@ -1,6 +1,7 @@
 <br>
 <h1 style="color: lightcoral; text-align: center;">Analytics</h1>
 <hr>
+<br>
 <div class="analytics_columns">
     <h2>Users</h2>
     <div>
@@ -16,7 +17,6 @@
         <li>Number of Talents: <%= Talent.all.count %></li>
         <li>Most Occuring Talent: <%= link_to Talent.most_users.name, talent_path(Talent.most_users.id) %></li>
     </div>
-    <br>
     <h2>Houses</h2>
     <div>
         <li>Number of Houses: <%= House.all.count %></li>
@@ -27,6 +27,8 @@
     <h2>Cities</h2>
     <div>
         <li>Number of Cities: <%= City.all.count %></li>
+        <li>Most Populated City: <%= City.highest_pop %></li>
+        <li>Least Populated City: <%= City.lowest_pop %></li>
     </div>
 </div>
 <br>
