@@ -8,9 +8,10 @@
         </li>
     <% end %>
 </ul>
-<% if current_user.admin != 3 %>
-    <button><%= link_to "Edit City", edit_city_path(@city) %></button>
-<% end %>
-
 <br>
-<button><%= link_to "Cities Page", cities_path %></button>
+<% if current_user.admin == 3 %>
+    <button class="rounded_button_small"><%= link_to "Edit City", edit_city_path(@city) %></button>
+<% end %>
+<br><br>
+<br>
+<button class="rounded_button"><%= link_to "Cities Page", cities_path %></button>

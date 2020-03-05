@@ -144,7 +144,7 @@
   border: none;
   background-color: rgb(243, 204, 205);
   padding: 14px 28px;
-  font-size: smaller;
+  font-size: medium;
 }
 
 .rounded_button_small a:visited{
