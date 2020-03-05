@@ -16,6 +16,7 @@ class TalentsController < ApplicationController
 
     def create
         @talent = Talent.create(talent_params)
+        UserTalent.create(talent: @talent, user: current_user)
         
         redirect_to talent_path(@talent)
     end
