@@ -15,7 +15,11 @@
             <% end %>
         </ul>
     <% else %>
-        <p>She doesn't have any.</p>
+        <% if current_user != @user %>
+            <p>She doesn't have any.</p>
+        <% else %>
+            <p><%= link_to "Create", new_talent_path %> or <%= link_to "choose", edit_user_path %> some talents</p>
+        <% end %>
     <% end %>
 </div>
 

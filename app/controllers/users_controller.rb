@@ -27,8 +27,8 @@ class UsersController < ApplicationController
     end
 
     def create
-        byebug
         @user = User.new(user_params)
+        @user.update(city_id: params[:city_id].to_i)
         if @user.valid?
             @user.save
             session[:user_id] = @user.id

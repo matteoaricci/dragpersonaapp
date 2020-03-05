@@ -140,4 +140,25 @@
   color: white;
 }
 
+.rounded_button_small {
+  display: block;
+  width: 20%;
+  border: none;
+  background-color: rgb(243, 204, 205);
+  padding: 14px 28px;
+  font-size: smaller;
+}
 
+.rounded_button_small a:visited{
+  color: rgb(26, 26, 26);
+}
+
+.rounded_button_small a:link{
+  color: rgb(26, 26, 26);
+}
+.rounded_button_small a:active{
+  color: rgb(26, 26, 26);
+}
+.rounded_button_small a:hover{
+  color: white;
+}
