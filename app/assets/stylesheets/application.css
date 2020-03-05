@@ -79,11 +79,11 @@
   }
   
   .login_box {
-      display: block;
-      height: 200px;
-      border-radius: 50%;
-      margin-left: auto;
-      margin-right: auto;
+    display: block;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .cards {
@@ -107,8 +107,6 @@
     padding: 14px 28px;
     font-size: large;
   }
-
-
 
 .button_pink {
   background-color: rgb(243, 204, 205);
@@ -161,4 +159,13 @@
 }
 .rounded_button_small a:hover{
   color: white;
+}
+
+.banner_image {
+  display: inline;
+  max-width: 100%;
+}
+
+.center {
+  text-align: center;
 }
