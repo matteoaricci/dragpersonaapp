@@ -11,6 +11,7 @@
 }
 
 .user_info {
+    
     margin: 10% 25%;
     padding: 20px;
     text-align: center;
@@ -21,3 +22,19 @@
     background-color: rgba(216, 157, 159, 0.329);
 }
 
+div.user_talent_links a {
+    color: rgb(255, 178, 106);
+}
+
+div.user_talent_links a:hover {
+    color: rgb(246, 145, 255);
+}
+
+div.user_city_link a {
+    color: rgb(255, 178, 106);
+
+}
+
+div.user_city_link a:hover {
+    color: rgb(246, 145, 255);
+}
