@@ -68,7 +68,8 @@
   
   /* mouse over link */
   a:hover {
-    color: pink;
+    color: black;
+    text-decoration: none;
   }
   
   /* selected link */
@@ -77,9 +78,31 @@
   }
   
   .login_box {
+      display: block;
       height: 200px;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
   }
 
   .cards {
     max-width: 100%;
+  }
+
+  nav {
+    display: block;
+  }
+
+  .login_form {
+    text-align: center;
+  }
+
+  .rounded_button {
+    display: block;
+
+    width: 100%;
+    border: none;
+    background-color: rgb(243, 204, 205);
+    padding: 14px 28px;
+    font-size: 16px;
   }

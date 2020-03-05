@@ -15,7 +15,7 @@
         <%= image_tag("drag_yourself_logo.png", class:"d-inline-block align-top logo", alt:"logo") %>
         Drag Yourself
       </a>
-    </nav>
+    
   <div class="header">
     <% if controller.controller_name != "sessions" %>
       <% if session[:user_id] %>
@@ -29,12 +29,12 @@
         </div>
       <% end %>
     <% end %>
-
+  
     <% if flash[:login_warning] %>
       <%= flash[:login_warning] %>
     <% end %>
   </div>
-    
+    </nav>
     <%= yield %>
   </body>
 </html>

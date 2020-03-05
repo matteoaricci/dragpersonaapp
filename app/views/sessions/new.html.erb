@@ -1,15 +1,19 @@
-<h1>Login</h1>
+<h1 style="text-align: center;">Login</h1>
 
 <div>
 <%= image_tag("roxxxyoncomputer.jpg", class:"login_box") %>
 </div>
 <br><br>
+<div class="login_form">
 <%= form_tag '/login' do %>
-    <%= label_tag :username %>
-    <%= text_field_tag :username %>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-    <%= submit_tag "Login" %>
+    <h4> <%= label_tag :username %>
+    <%= text_field_tag :username %></h4>
+   <h4><%= label_tag :password %>
+    <%= password_field_tag :password %></h4>
+    <button class="rounded_button">
+         <%= submit_tag "Login" %>
+    </button>
 <% end %>
+</div>
 <br>
-<button><%= link_to "Not Yet a Queen??? Girl Make One", new_user_path %></button>
+<button class="rounded_button rounded"><%= link_to "Not Yet a Queen??? Girl Make One", new_user_path %></button>
