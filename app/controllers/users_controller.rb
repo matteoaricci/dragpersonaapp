@@ -10,15 +10,11 @@ class UsersController < ApplicationController
     end
     
     def edit
-
     end
     
     def update
         @user.update(user_params)
-        if params[:house_attributes["name"]] != "" && params[:house_attributes["description"]] != ""
-            @user.build_house
-        end
-
+        
         redirect_to user_path(@user)
     end
 

@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user
 
+    helper_method :current_user
+
     def index
     end
 
@@ -14,6 +16,14 @@ class ApplicationController < ActionController::Base
             @current_user = nil
         end
         @current_user
+    end
+
+    def admin
+        current_user.admin == 3
+    end
+
+    def mother
+        current_user.admin >= 2
     end
     
     def is_admin

@@ -1,7 +1,7 @@
 class HousesController < ApplicationController
 
     before_action :find_house, only: [:show, :edit, :update, :destroy]
-    before_action :find_mother, only: [:show, :edit, :update]
+    before_action :mother, only: [:show, :edit, :update, :destroy]
 
     def index
         @houses = House.all
