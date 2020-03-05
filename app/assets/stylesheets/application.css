@@ -34,13 +34,19 @@
      height: 100%;
  }
 
+ @font-face {
+   font-family: "Vogue";
+   src: url("//db.onlinewebfonts.com/t/1fe2752229214010944258ae975abca4.eot");
+   src: url("//db.onlinewebfonts.com/t/1fe2752229214010944258ae975abca4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1fe2752229214010944258ae975abca4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1fe2752229214010944258ae975abca4.woff") format("woff"), url("//db.onlinewebfonts.com/t/1fe2752229214010944258ae975abca4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1fe2752229214010944258ae975abca4.svg#Vogue") format("svg"); 
+  }
+
  body {
      margin-right: 10%;
      margin-left: 10%;
      padding-left: 5%;
      padding-right: 5%;
      padding-top: 2%;
-     font-family: 'Times New Roman', Times, serif;
+     font-family: 'Vogue', Fallback, "Times";
      height: 100%;
  }
 
