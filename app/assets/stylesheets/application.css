@@ -31,6 +31,7 @@
  html {
      background: url(pink_rice.png);
      background-repeat: repeat;
+     height: 100%;
  }
 
  body {
@@ -40,7 +41,7 @@
      padding-right: 5%;
      padding-top: 2%;
      font-family: 'Times New Roman', Times, serif;
-     min-height: 100%;
+     height: 100%;
  }
 
  .logo {
@@ -94,15 +95,31 @@
   }
 
   .login_form {
-    text-align: center;
+    text-align: left;
+    
   }
 
   .rounded_button {
     display: block;
-
-    width: 100%;
+    width: 35%;
     border: none;
     background-color: rgb(243, 204, 205);
     padding: 14px 28px;
     font-size: 16px;
   }
+
+.button_pink {
+  background-color: rgb(243, 204, 205);
+  width: 35%;
+}
+
+.button_pink:hover {
+  color: white;
+}
+
+.login_body {
+  background-image: url(violetserving.jpg);
+  background-size: cover;
+  
+  position: relative;
+}

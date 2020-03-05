@@ -1,8 +1,7 @@
-<h1 style="text-align: center;">Login</h1>
+<body class="login_body">
+<h1 style="text-align: left;">Login</h1>
 
-<div>
-<%= image_tag("roxxxyoncomputer.jpg", class:"login_box") %>
-</div>
+
 <br><br>
 <div class="login_form">
 <%= form_tag '/login' do %>
@@ -10,10 +9,12 @@
     <%= text_field_tag :username %></h4>
    <h4><%= label_tag :password %>
     <%= password_field_tag :password %></h4>
-    <button class="rounded_button">
-         <%= submit_tag "Login" %>
-    </button>
+    
+    <%= submit_tag "Login", class:"btn btn-lg button_pink" %>
+
 <% end %>
-</div>
+
 <br>
-<button class="rounded_button rounded"><%= link_to "Not Yet a Queen??? Girl Make One", new_user_path %></button>
+<button class="rounded_button rounded"><%= link_to "Make a New Queen", new_user_path %></button>
+   </div>
+</body>
