@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/home', to: 'application#homepage', as: 'homepage'
   get '/analytics', to: 'application#analytics', as: 'analytics'
   get '/', to: 'sessions#new', as: 'login'
-  post '/login', to: 'sessions#create'
+  post '/', to: 'sessions#create'
   get '/logout', to: 'sessions#logout', as: 'logout'
   get '/logoutyes', to: 'sessions#logout_yes', as: 'logouts'
   resources :users

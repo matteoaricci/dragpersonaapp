@@ -12,11 +12,8 @@ class SessionsController < ApplicationController
       render :new
     end
   end
-  def logout 
-  end
-  
-  def logout_yes
+  def logout
     session.clear
-    redirect_to login_path
+    redirect_to login_path 
   end
 end

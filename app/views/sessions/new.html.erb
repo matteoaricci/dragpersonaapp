@@ -1,9 +1,11 @@
 <body class="login_body">
-<%= flash.notice %>
 
 <br>
+
+<h4 class="pink_text center black_background"><%= flash[:login_warning] %></h4>
 <div class="login_form">
-    <%= form_tag '/login' do %>
+
+    <%= form_tag '/' do %>
         <h4 style="color: pink;"> <%= label_tag :username %>
             <%= text_field_tag :username %></h4>
         <h4 style="color: pink;"><%= label_tag :password %>
@@ -14,6 +16,6 @@
     <% end %>
 
     <br>
-    <button class="rounded_button rounded" ><%= link_to "Make a New Queen", new_user_path %></button>
+    <button class="rounded_button rounded center" ><%= link_to "Make a New Queen", new_user_path %></button>
 </div>
 </body>
