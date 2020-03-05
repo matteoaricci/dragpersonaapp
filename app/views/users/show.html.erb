@@ -1,13 +1,14 @@
+<div class="user_show_page">
 <br>
-<div style="background-color: rgba(236, 158, 158, 0.788); text-align: center; margin-right: 50%; color: white;">
+<div style="background-color: rgba(236, 158, 158, 0.788); text-align: center; color: white;">
     <br>
     <h1><%= @user.drag_name %></h1>
     <br>
 </div>
 <%= flash.notice %>
-<div>
+<div class="user_info">
     <p>Real Name: <%= @user.name %></p>
-</div>
+
 <div>
     <p>Lives in: <%= link_to @user.city.name, city_path(@user.city) %></p>
 </div>
@@ -26,6 +27,8 @@
             <p><%= link_to "Create", new_talent_path %> or <%= link_to "choose", edit_user_path %> some talents</p>
         <% end %>
     <% end %>
+    </div>
+</div>
 </div>
 
 <nav class="navbar fixed-bottom navbar-light bg-light margins center">

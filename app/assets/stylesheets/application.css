@@ -95,13 +95,19 @@
   }
 
   .login_form {
-    text-align: left;
-    
+    margin: 10% 25%;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-style: double;
+    border-color: rgb(243, 204, 205);
+    border-width: 10px;
   }
 
   .rounded_button {
     display: block;
-    width: 35%;
+    width: 85%;
+    margin: auto;
     border: none;
     background-color: rgb(243, 204, 205);
     padding: 14px 28px;
@@ -110,7 +116,7 @@
 
 .button_pink {
   background-color: rgb(243, 204, 205);
-  width: 35%;
+  width: 85%;
 }
 
 .button_pink:hover {
@@ -118,7 +124,7 @@
 }
 
 .login_body {
-  background-image: url(violetserving.jpg);
+  background-image: url(aquariabone.jpg);
   background-size: cover;
   
   position: relative;

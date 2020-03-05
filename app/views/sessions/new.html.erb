@@ -1,13 +1,12 @@
 <body class="login_body">
-<h1 style="text-align: left;">Login</h1>
 <%= flash.notice %>
 
 <br>
 <div class="login_form">
     <%= form_tag '/login' do %>
-        <h4> <%= label_tag :username %>
+        <h4 style="color: pink;"> <%= label_tag :username %>
             <%= text_field_tag :username %></h4>
-        <h4><%= label_tag :password %>
+        <h4 style="color: pink;"><%= label_tag :password %>
             <%= password_field_tag :password %></h4>
         
         <%= submit_tag "Login", class:"btn btn-lg button_pink" %>
