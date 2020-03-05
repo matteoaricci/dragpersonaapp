@@ -6,30 +6,32 @@
     <br>
 </div>
 <%= flash.notice %>
-<div class="user_info">
-    <p>Real Name: <%= @user.name %></p>
-
-<div>
-    <p>Lives in: <%= link_to @user.city.name, city_path(@user.city) %></p>
-</div>
-<div>
-    <h3><%= @user.drag_name %>'s Talents: </h3>
-    <% if @user.talents.any? %>
-        <ul>
-            <% @user.talents.each do |talent| %>
-                <li><%= link_to talent.name, talent_path(talent) %></li>
-            <% end %>
-        </ul>
-    <% else %>
-        <% if current_user != @user %>
-            <p>She doesn't have any.</p>
+<div class="user_info" style="color: white;">
+    <div>
+        <h2>Real Name: <%= @user.name %></h2>
+    </div>
+    <div>
+        <h2>Lives in: <%= link_to @user.city.name, city_path(@user.city) %></h2>
+    </div>
+    <div>
+        <h2><%= @user.drag_name %>'s Talents: </h2>
+        <% if @user.talents.any? %>
+            <ul>
+                <% @user.talents.each do |talent| %>
+                    <li><%= link_to talent.name, talent_path(talent) %></li>
+                <% end %>
+            </ul>
         <% else %>
-            <p><%= link_to "Create", new_talent_path %> or <%= link_to "choose", edit_user_path %> some talents</p>
+            <% if current_user != @user %>
+                <p>She doesn't have any.</p>
+            <% else %>
+                <h4><%= link_to "Create", new_talent_path %> or <%= link_to "choose", edit_user_path %> some talents</h4>
+            <% end %>
         <% end %>
-    <% end %>
+        </div>
     </div>
 </div>
-</div>
+
 
 <nav class="navbar fixed-bottom navbar-light bg-light margins center">
     <% if @user == current_user %>
