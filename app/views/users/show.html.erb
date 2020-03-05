@@ -1,4 +1,9 @@
-<h1><%= @user.drag_name %></h1>
+<br>
+<div style="background-color: rgba(236, 158, 158, 0.555); text-align: center; margin-left: 50%; margin-right: 0;">
+    <br>
+    <h1><%= @user.drag_name %></h1>
+    <br>
+</div>
 <%= flash.notice %>
 <div>
     <p>Real Name: <%= @user.name %></p>
@@ -23,11 +28,12 @@
     <% end %>
 </div>
 
-<% if @user.id == session[:user_id] %>
-    <%= form_tag(user_path(@user), method: :delete) do %>
-        <%= submit_tag "Delete User" %>
+<nav class="navbar fixed-bottom navbar-light bg-light margins center">
+    <% if @user == current_user %>
+        <a class="nav-link" href="/logout">Logout</a>
+        <a class="nav-link" href="/edit">Edit</a>
+        <%= form_tag(user_path(@user), method: :delete) do %>
+            <%= submit_tag "Delete Account", class:"pink_text_button bg-light" %>
+        <% end %>
     <% end %>
-
-    <button><%= link_to "Edit This Account", edit_user_path(@user) %></button>
-<% end %>
-<button><%= link_to "Back to All Users", users_path %></button>
+</nav>

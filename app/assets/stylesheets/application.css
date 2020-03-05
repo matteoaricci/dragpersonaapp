@@ -169,3 +169,19 @@
 .center {
   text-align: center;
 }
+
+.margins {
+  margin-left: 30%;
+  margin-right: 30%;
+  align-content: center;
+  font-size: large;
+}
+
+.pink_text_button {
+  border: none;
+  color: lightcoral;
+}
+
+.pink_text_button:hover {
+  color: black;
+}
