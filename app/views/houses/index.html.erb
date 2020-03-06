@@ -1,13 +1,15 @@
-<h1>All Houses</h1>
-
-<ul>
+<div class="index_template">
+<br>
+<h1 class="index_title">All Houses</h1>
+<div class="index_info">
+<ul class="index_ul">
     <% @houses.each do |house| %>
-    <li>
-        <%= link_to house.name, house_path(house) %>
-    </li>
-    Members: <%= house.count_users %>
+    <h4><div class="index_list_item">
+        House of <%= link_to house.name, house_path(house) %>
+    </div></h4>
+    <h5><div style="color: white;">Members: <%= house.count_users %><div></h5>
     <% end %>
 </ul>
 <br>
-<button class="rounded_button_medium"><%= link_to "Make a New House", new_house_path %></button><br>
-<button class="rounded_button bottom"><%= link_to "Back to Home Page", homepage_path %></button>
+<button class="rounded_button_small" style="width: 100%"><%= link_to "Make a New House", new_house_path %></button><br>
+<button class="rounded_button_small"><%= link_to "Back to Home Page", homepage_path %></button>

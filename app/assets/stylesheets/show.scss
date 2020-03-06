@@ -1,0 +1,48 @@
+.show_page {
+    background-image: url(sheacoulee.jpg);
+    background-size: cover;
+    background-repeat: none;
+    height: 100%;
+    text-align: center;
+    color: pink;
+}
+
+.show_title {
+    color: white;
+    background-color: rgba(236, 158, 158, 0.788);
+    text-align: center;
+    padding: 2%;
+}
+
+.show_info {
+    
+    margin: 5% 25%;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-style: double;
+    border-color: rgb(245, 181, 183);
+    border-width: 10px;
+    background-color: rgb(29, 29, 29);
+}
+
+div.show_info {
+    margin-left: 15%;
+    margin-right: 15%
+}
+
+
+div.show_info .rounded_button_small {
+    width: 100%;
+}
+
+.show_list a:hover {
+    color: white;
+}
+// div.user_talent_links a:hover {
+//     color: white;
+// }
+
+// div.user_city_link a:hover {
+//     color: white;
+// }

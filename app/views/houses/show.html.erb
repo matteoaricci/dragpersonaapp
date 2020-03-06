@@ -1,29 +1,32 @@
-<h1>House of <%= @house.name %></h1>
-
-<h4><%= @house.description %></h4>
-
-<h2>Mother of the House: <%= @mother.drag_name %></h2>
-
-<h3>Most Common Talent: <%= @house.common_talent %></h3>
-
-<h3>Members of the House</h3>
-<ul>
-    <% @house.users.each do |queen| %>
-    <li>
-        <%= link_to queen.drag_name, user_path(queen) %>
-    </li>
-    <% end %>
-</ul>
-<% if @mother == current_user %>
-    <%= form_tag house_path(@house), method: :delete do %>
-        <%= submit_tag "Delete House", class:"rounded_button_small" %>
-    <% end %>
-    <br>
-    <button class="rounded_button_small"><%= link_to "Edit House", edit_house_path(@house) %></button>
-<% end %>
-<% if @mother != current_user %>
-    <br>
-    <button class="rounded_button_small"><%= link_to "Request to Join House", join_path(@house) %></button>
-<% end %>
-<br>
-<button class="rounded_button bottom"><%= link_to "Back to Houses Page", houses_path %></button>
+<div class="show_page">
+   <br>
+   <h1 class="show_title">House of <%= @house.name %></h1>
+   <div class="show_info" style="margin-left: 10%, margin-right:10%;">
+      <h2 style="color: white;">Mother of the House: <%= @mother.drag_name %></h2>
+      <h4><%= @house.description %></h4>
+      <h3>Most Common Talent: <%= @house.common_talent %></h3>
+      <h3>Members of the House</h3>
+      <ul class="index_ul">
+         <% @house.users.each do |queen| %>
+         <h5>
+            <div class="show_list">
+               <%= link_to queen.drag_name, user_path(queen) %>
+            </div>
+         </h5>
+         <% end %>
+      </ul>
+      <% if @mother == current_user %>
+      <%= form_tag house_path(@house), method: :delete do %>
+      <%= submit_tag "Delete House", class:"rounded_button_small" %>
+      <% end %>
+      <br>
+      <button class="rounded_button_small"><%= link_to "Edit House", edit_house_path(@house) %></button>
+      <% end %>
+      <% if @mother != current_user %>
+      <br>
+      <button class="rounded_button_small"><%= link_to "Request to Join House", join_path(@house) %></button>
+      <% end %>
+      <br>
+      <button class="rounded_button_small"><%= link_to "Back to Houses Page", houses_path %></button>
+   </div>
+</div>

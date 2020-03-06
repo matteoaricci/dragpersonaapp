@@ -1,14 +1,19 @@
-<h1>All Cities</h1>
-
-<ul>
+<div class="index_template">
+<br>
+<h1 class="index_title">All Cities</h1>
+<div class="index_info" style="margin-top: 5%;">
+<ul class="index_ul">
     <% @cities.each do |city| %>
-        <li>
+        <h5><div class="index_list_item">
             <%= link_to city.name, city_path(city) %>
-        </li>
+        </div></h5>
     <% end %>
 </ul>
 <br>
 
 <button class="rounded_button_small"><%= link_to "New City", new_city_path %></button>
 <br>
-<button class="rounded_button bottom"><%= link_to "Home Page", homepage_path %></button>
+<button class="rounded_button small" style="width: 100%;"><%= link_to "Home Page", homepage_path %></button>
+</div>
+</div>
+</div>
