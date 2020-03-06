@@ -1,0 +1,12 @@
+<h1 class="pink_text center">Message from <%= @sender.name %>:</h1>
+<br> <br>
+<h3><%= @message.subject %></h3>
+<hr>
+<p><%= @message.body %></p>
+
+<br>
+<% if @sender != current_user %>
+    <button class="rounded_button_small rounded"><%= link_to "Respond", new_message_path %></button>
+<% end %>
+
+<button class="rounded_button bottom rounded"><%= link_to "Back to Messages", messages_path %></button>

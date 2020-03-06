@@ -16,9 +16,13 @@
             <th scope="row"><%= @counter %></th>
                 <td><%= User.find_by(id: msg.sender_id).name %></td>
                 <td><%= msg.subject %></td>
-                <td><%= msg.body %></td>
+                <td><%= link_to msg.body, message_path(msg) %></td>
                 <% @counter += 1 %>
         </tr>
         <% end %>
     </tbody>
   </table>
+<br>
+  <button class="rounded_button_small rounded"><%= link_to "New Message", new_message_path %></button>
+<br>
+  <button class="rounded_button bottom rounded"><%= link_to "Back to Profile Page", user_path(current_user) %></button>

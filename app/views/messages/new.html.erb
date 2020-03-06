@@ -1,0 +1,15 @@
+<h1 class="pink_text">New Message</h1>
+
+<% @possible_recipients = User.all %>
+<% @possible_recipients -= [current_user] %>
+
+<%= form_for @message do |h| %>
+    <%= h.label :recipient_id, "Recipient: " %> <br>
+    <%= h.collection_select :recipient_id, @possible_recipients, :id, :name %><br>
+    <%= h.label :subject, "Subject: " %> <br>
+    <%= h.text_field :subject %><br>
+    <%= h.label :body, "Body: " %> <br>
+    <%= h.text_area :body %><br>
+    <br>
+    <%= h.submit class:"rounded_button_small rounded" %>
+<% end %>
