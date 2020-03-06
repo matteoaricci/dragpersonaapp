@@ -31,7 +31,12 @@
  html {
      background: url(pink_rice.png);
      background-repeat: repeat;
-     height: 100%;
+     
+ }
+
+ html, body {
+   height: 100%;
+   overflow: scroll;
  }
 
  body {
@@ -41,7 +46,7 @@
      padding-right: 5%;
      padding-top: 2%;
      font-family: 'Times New Roman', Times, serif;
-     height: 100%;
+     
  }
 
  .logo {
