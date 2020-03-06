@@ -15,11 +15,15 @@
     <% end %>
 </ul>
 <% if @mother == current_user %>
-<%= form_tag house_path(@house), method: :delete do %>
-    <%= submit_tag "Delete House", class:"rounded_button_small" %>
+    <%= form_tag house_path(@house), method: :delete do %>
+        <%= submit_tag "Delete House", class:"rounded_button_small" %>
+    <% end %>
+    <br>
+    <button class="rounded_button_small"><%= link_to "Edit House", edit_house_path(@house) %></button>
 <% end %>
-<br>
-<button class="rounded_button_small"><%= link_to "Edit House", edit_house_path(@house) %></button>
+<% if @mother != current_user %>
+    <br>
+    <button class="rounded_button_small"><%= link_to "Request to Join House", join_path(@house) %></button>
 <% end %>
 <br>
 <button class="rounded_button bottom"><%= link_to "Back to Houses Page", houses_path %></button>

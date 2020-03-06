@@ -5,7 +5,16 @@
 <p><%= @message.body %></p>
 
 <br>
-<% if @sender != current_user %>
+
+<% if @message.subject == "Request to Join" %>
+    <div class="row">
+        <button class="rounded_button_small rounded"><%= link_to "Accept", accept_path %></button>
+
+        <button class="rounded_button_small rounded"><%= link_to "Reject", reject_path %></button>
+    </div>
+<% end %>
+
+<% if @sender != current_user && @message.subject != "Request to Join" %>
     <button class="rounded_button_small rounded"><%= link_to "Respond", new_message_path %></button>
 <% end %>
 
