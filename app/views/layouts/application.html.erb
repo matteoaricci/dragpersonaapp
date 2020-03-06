@@ -52,7 +52,10 @@
 
       </div>
     </nav>
-
+    <br>
+    <% if flash[:notice] %>
+      <h4 class="pink_text center black_background"><%= flash[:notice] %></h4>
+    <% end %>
     <%= yield %>
     
   </body>
