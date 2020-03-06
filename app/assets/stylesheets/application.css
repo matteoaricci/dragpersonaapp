@@ -118,7 +118,7 @@
   background-color: rgba(0, 0, 0, 0.651);
 }
 
-.white {
+.grey_background {
   background-color: rgb(29, 29, 29);
 }
 
@@ -228,7 +228,7 @@
   width: 10%;
 }
 
-.analytics_columns {
+.two_columns {
   column-count: 2;
   column-gap: 20px;
   column-rule-style: solid;
