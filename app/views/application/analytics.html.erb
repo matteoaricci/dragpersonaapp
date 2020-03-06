@@ -20,8 +20,10 @@
     <h2 class="pink_text">Houses</h2>
     <div>
         <li>Number of Houses: <%= House.all.count %></li>
-        <li>Most Popular House: <%= link_to House.most_users.name, house_path(House.most_users.id) %></li>
-        <li>Most Talented House: <%= link_to House.most_talented.name, house_path(House.most_talented.id) %></li>
+        <% if House.all.count != 0 %>
+            <li>Most Popular House: <%= link_to House.most_users.name, house_path(House.most_users.id) %></li>
+            <li>Most Talented House: <%= link_to House.most_talented.name, house_path(House.most_talented.id) %></li>
+        <% end %>
     </div>
 
     <h2 class="pink_text">Cities</h2>

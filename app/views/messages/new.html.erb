@@ -2,6 +2,13 @@
 
 <% @possible_recipients = User.all %>
 <% @possible_recipients -= [current_user] %>
+<br>
+<% if @message.errors.any? %>
+    <% @message.errors.full_messages.each do |msg| %>
+        <p class="error_message"><%= msg %>.</p><br>
+    <% end %>
+    <br>
+<% end %>
 
 <%= form_for @message do |h| %>
     <%= h.label :recipient_id, "Recipient: " %> <br>
