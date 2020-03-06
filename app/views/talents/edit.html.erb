@@ -1,15 +1,32 @@
-<h1>Edit Talent</h1>
+<h1 style="text-align: center;">Edit Talent</h1>
+<br>
+<% if @talent.errors.any? %>
+    <% @talent.errors.full_messages.each do |msg| %>
+        <p class="error_message"><%= msg %>.</p><br>
+    <% end %>
+    <br>
+<% end %>
 
 <%= form_for @talent do |f| %>
-    <%= f.label :name, "Full Name: " %><br>
-    <%= f.text_field :name %><br>
-    <%= f.label :description, "Description: " %><br>
-    <%= f.text_area :description %><br>
-    <%= f.label :user_ids, "User: " %><br>
-    <%= f.collection_check_boxes :user_ids, User.all, :id, :drag_name %><br><br>
-    <%= f.submit %>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.label :name %>
+        <%= f.text_field :name, class:"form-control", placeholder:"Name" %>
+      </div>
+      <div class="form-group col-md-6">
+        <%= f.label :description %>
+        <%= f.text_field :description, class:"form-control", placeholder:"Description" %>
+      </div>
+    </div>
+    <hr>
+    <div class="form-row">
+      <div class="form-group col">
+        <p class="center">Queens: </p>
+        <%= f.collection_check_boxes(:user_ids, User.all, :id, :drag_name) do |b| %>
+            <%= b.label { b.check_box + b.text } %>
+        <% end %>
+      </div>
+    </div>
+    <button type="submit" class="btn rounded_button">Submit</button>
 <% end %>
-<br>
-<div>
-    <%= link_to "Back to #{@talent.name}'s Page", talent_path(@talent) %>
-</div>
+

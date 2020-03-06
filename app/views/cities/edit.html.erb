@@ -1,13 +1,13 @@
-<h1>Edit <%= @city.name %></h1>
-
-<div>
-    <%= form_for @city do |f| %>
-        <%= f.label :name %> <br>
-        <%= f.text_field :name %> <br>
-        <%= f.label :user_ids, "Queens" %> <br>
-        <%= f.collection_check_boxes :user_ids, User.all, :id, :drag_name %> <br> <br>
-        <%= f.submit class:"rounded_button_small" %>
-    <% end %>
-    <br><br>
-<button class="rounded_button"><%= link_to "Back to City Page", city_path(@city) %></button>
-</div>
+<h1>Edit City</h1>
+<hr>
+<br>
+<%= form_for @city do |f| %>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.label :name %>
+        <%= f.text_field :name, class:"form-control", placeholder:"Name" %>
+      </div>
+    </div>
+    <br>
+    <button type="submit" class="btn rounded_button">Submit</button>
+<% end %>

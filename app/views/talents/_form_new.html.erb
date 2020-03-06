@@ -1,8 +1,16 @@
-<%= form_for @talent do |t| %>
-    <%= t.label :name %> <br>
-    <%= t.text_field :name %><br>
-    <%= t.label :description %> <br>
-    <%= t.text_area :description %><br>
+<hr>
+<br>
+<%= form_for @talent do |f| %>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.label :name %>
+        <%= f.text_field :name, class:"form-control", placeholder:"Name" %>
+      </div>
+      <div class="form-group col-md-6">
+        <%= f.label :description %>
+        <%= f.text_field :description, class:"form-control", placeholder:"Description" %>
+      </div>
+    </div>
     <br>
-    <%= t.submit class:"rounded_button_small" %>
+    <button type="submit" class="btn rounded_button">Submit</button>
 <% end %>
