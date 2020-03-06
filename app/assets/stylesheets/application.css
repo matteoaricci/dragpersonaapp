@@ -35,13 +35,13 @@
  }
 
  body {
-     margin-right: 10%;
-     margin-left: 10%;
-     padding-left: 5%;
-     padding-right: 5%;
-     padding-top: 2%;
-     font-family: 'Times New Roman', Times, serif;
-     height: 100%;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100%;
  }
 
  .logo {

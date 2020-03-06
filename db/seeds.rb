@@ -45,7 +45,7 @@ yo = User.create(name: "Yo Park", drag_name: "Annie Mae", city: centreville, hou
     with a serious addiction to shopping.", admin: 2, username: 'yo', password: "girl")
 ryan = User.create(name: "Ryan Wilson", drag_name: "Toyotathot", city: bethesda, house: nil, bio: "Ryan is a giving 
     student who enjoys cycling.", username: 'ryan', password: "girl")
-lauren = User.create(name: "Lauren Yu", drag_name: "Cleopatra with a K", city: reston, house: nil, bio: "Lauren is a 
+lauren = User.create(name: "Lauren Yu", drag_name: "Cleopatra-with-a-K", city: reston, house: nil, bio: "Lauren is a 
     murderous scientific researcher, traumatised by her mother leaving when she was one.", username: 'lauren', password: "girl")
 sonata = User.create(name: "Sonata Arrington", drag_name: "Sarah Tonin", city: washington, house: nil, bio: "Sonata 
     is a loveable teenager who enjoys working on cars", username: 'sonata', password: "girl")

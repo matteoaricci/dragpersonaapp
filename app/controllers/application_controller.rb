@@ -78,7 +78,7 @@ class ApplicationController < ActionController::Base
         @sender = User.find_by(id: @message.sender_id)
         @recipient = User.find_by(id: @message.recipient_id)
 
-        @sender.house_id = @recipient.house_id
+        @sender.update(house_id: @recipient.house_id)
 
         @message = Message.create(recipient_id: @sender.id, sender_id: @recipient.id,
         subject:"Request Accepted", body: "#{@recipient.name} accepted your request to join

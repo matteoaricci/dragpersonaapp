@@ -51,7 +51,7 @@ class HousesController < ApplicationController
     end
 
     def find_mother
-        @mother = User.find_by(username: @house.mother)
+        @mother = User.find_by(id: @house.mother_id)
         return @mother
     end
 end
