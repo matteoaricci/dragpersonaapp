@@ -17,17 +17,17 @@
       <div class="user_talent_links">
          <h2><%= @user.drag_name %>'s Talents: </h2>
          <% if @user.talents.any? %>
-         <ul>
-            <% @user.talents.each do |talent| %>
-            <div><%= link_to talent.name, talent_path(talent) %></div>
+            <ul>
+               <% @user.talents.each do |talent| %>
+               <div><%= link_to talent.name, talent_path(talent) %></div>
+               <% end %>
+            </ul>
+         <% else %>
+            <% if current_user != @user %>
+            <div>She doesn't have any.</div>
+            <% else %>
+            <h4><%= link_to "Create", new_talent_path %> or <%= link_to "choose", edit_user_path%> some talents</h4>
             <% end %>
-         </ul>
-         <% else %>
-         <% if current_user != @user %>
-         <p>She doesn't have any.</p>
-         <% else %>
-         <h4><%= link_to "Create", new_talent_path %> or <%= link_to "choose", edit_user_path%> some talents</h4>
-         <% end %>
          <% end %>
       </div>
    </div>
@@ -38,13 +38,16 @@
       </div>
    </div>
 </div>
-<nav class="navbar fixed-bottom navbar-light bg-light margins center">
-   <% if @user == current_user %>
-   <a class="nav-link" href="/logout">Logout</a>
-   <a class="nav-link" href="/inbox">Inbox</a>
-   <a class="nav-link" href="/users/<%= @user.id %>/edit">Edit Account</a>
-   <%= form_tag(user_path(@user), method: :delete) do %>
-   <%= submit_tag "Delete Account", class:"pink_text_button bg-light" %>
-   <% end %>
-   <% end %>
-</nav>
+
+<% if @user == current_user %>
+   <nav class="navbar fixed-bottom navbar-light bg-light margins center">
+      <a class="nav-link" href="/logout">Logout</a>
+      <a class="nav-link" href="/inbox">Inbox</a>
+      <a class="nav-link" href="/users/<%= @user.id %>/edit">Edit Account</a>
+      <%= form_tag(user_path(@user), method: :delete) do %>
+      <%= submit_tag "Delete Account", class:"pink_text_button bg-light" %>
+      <% end %>
+   </nav>
+<% else %>
+   <button class="rounded_button margins rounded bottom"><%= link_to "Message Her", new_message_path %></button>
+<% end %>
