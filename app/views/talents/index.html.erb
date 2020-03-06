@@ -1,13 +1,16 @@
-<h1>All Talents</h1>
-
-<ul>
+<div class="index_template">
+<br>
+<h1 class="index_title">All Talents</h1>
+<div class="index_info" style="margin-top: 5%;">
+<ul class="index_ul">
     <% @talents.each do |talent| %>
-    <li>
-        <%= link_to talent.name, talent_path(talent) %>
-    </li>
-    <% end %>
+        <h5><div class="index_list_item" style="text-align: center;"><%= link_to talent.name, talent_path(talent) %>
+    <% end %></div></h5>
 </ul>
 
 <button class="rounded_button_small"><%= link_to "New Talent", new_talent_path %></button>
-<br><br>
-<button class="rounded_button bottom"><%= link_to "Back to Home Page", homepage_path %></button>
+<br>
+<button class="rounded_button small" style="width: 100%;"><%= link_to "Back to Home Page", homepage_path %></button>
+</div>
+</div>
+</div>

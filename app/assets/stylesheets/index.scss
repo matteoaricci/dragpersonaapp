@@ -1,0 +1,45 @@
+div.index_template {
+    height: 100%;
+    background-image: url(servinglooks.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+div.index_info {
+   border-left-style: double;
+   border-right-style: double;
+   border-top-style: double;;
+   border-color: pink;
+   margin-left: 25%;
+   margin-right: 25%;
+   border-width: 10px;
+   background-color: rgb(29, 29, 29);
+   text-align: center;
+   margin-top: 10%;
+}
+
+div.index_info .rounded_button_small {
+    width: 100%;
+}
+
+.index_title {
+    color: white;
+    background-color: rgba(236, 158, 158, 0.788);
+    text-align: center;
+    padding: 2%;
+}
+
+.index_list_item {
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+}
+
+.index_list_item a:hover {
+    color: white;
+}
+
+.index_ul {
+    padding: 0;
+}

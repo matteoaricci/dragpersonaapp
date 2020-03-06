@@ -1,16 +1,18 @@
-<div class="user_index">
-    <div class="user_index_info">
-    <h1>All Users</h1>
+<div class="index_template">
+<br>
+    <h1 class="index_title">All Users</h1>
 
-    <ul>
+    <div class="index_info">
+    <ul class="index_ul">
         <% @users.each do |user| %>
-        <li><%= link_to user.drag_name, user_path(user) %><br>
+        <h4><div class="index_list_item"><%= link_to user.drag_name, user_path(user) %><br>
                 Number of Talents: <%= user.talents.count %><br>
-            </li>
+            </div></h4>
         <% end %>
     </ul>
 
     <br>
     <button class="rounded_button_small"><%= link_to "Back to Home Page", homepage_path %></button>
     </div>
+</div>
 </div>
