@@ -3,13 +3,12 @@ div.index_template {
     background-image: url(servinglooks.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
 div.index_info {
-   border-left-style: double;
-   border-right-style: double;
-   border-top-style: double;;
+   border-style: double;
    border-color: pink;
    margin-left: 25%;
    margin-right: 25%;
