@@ -13,6 +13,7 @@ City.destroy_all
 House.destroy_all
 Talent.destroy_all
 UserTalent.destroy_all
+Message.destroy_all
 
 centreville = City.create(name: "Centreville, VA")
 reston = City.create(name: "Reston, VA")
@@ -38,4 +39,8 @@ comedy = Talent.create(name: "Comedy", description: "Joan Rivers Could Never")
 imperse = Talent.create(name: "Impersonation", description: "Literally Who is She??")
 fashion = Talent.create(name: "Serving Looks", description: "All She Gotta Do is Show Up")
 
+heymatteo = Message.create(recipient_id: matt.id, sender_id: bri.id, subject: "Hey Matteo", body: "Did you know that I like sweaters?")
+himatteo = Message.create(recipient_id: matt.id, sender_id: bri.id, subject: "Oh no!!!", body: "Gordon Ramsay has the flu")
+soon = Message.create(recipient_id: matt.id, sender_id: bri.id, subject: "Did you hear?", body: "I've never killed a man with my bare hands. But soon.")
+heybri = Message.create(recipient_id: bri.id, sender_id: matt.id, subject: "Hey Bri", body: "Did you know that I hate sweaters?")
 
