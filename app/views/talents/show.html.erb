@@ -1,15 +1,17 @@
-<h1><%= @talent.name %></h1>
-
+<div class="show_page">
+<br>
+<h1 class="show_title"><%= @talent.name %></h1>
+<div class="show_info">
 <h2><%= @talent.description %></h2>
 
 
 <h2>Queens with This Talent</h2>
 
-<ul>
+<ul class="index_ul">
     <% @talent.users.each do |quen| %>
-    <li>
+    <h4><div class="show_list">
         <%= link_to quen.drag_name, user_path(quen) %>
-    </li>
+    </div></h4>
     <% end %>
 </ul>
 <br>
@@ -21,4 +23,6 @@
     <% end %>
 <% end %>
 <br>
-<button class="rounded_button bottom"><%= link_to "Back to Talent Index", talents_path %></button>
+<button class="rounded_button_small"><%= link_to "Back to Talent Index", talents_path %></button>
+</div>
+</div>
