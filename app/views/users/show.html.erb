@@ -36,7 +36,7 @@
 <nav class="navbar fixed-bottom navbar-light bg-light margins center">
     <% if @user == current_user %>
         <a class="nav-link" href="/logout">Logout</a>
-        <a class="nav-link" href="/messages">Messages</a>
+        <a class="nav-link" href="/inbox">Inbox</a>
         <a class="nav-link" href="/users/<%= @user.id %>/edit">Edit Account</a>
         <%= form_tag(user_path(@user), method: :delete) do %>
             <%= submit_tag "Delete Account", class:"pink_text_button bg-light" %>

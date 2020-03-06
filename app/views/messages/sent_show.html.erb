@@ -1,0 +1,9 @@
+<h1 class="pink_text center">Message you sent to <%= @recipient.name %>:</h1>
+<br> <br>
+<h3><%= @sent.subject %></h3>
+<hr>
+<p><%= @sent.body %></p>
+
+<br>
+
+<button class="rounded_button bottom rounded"><%= link_to "Inbox", inbox_path %></button>

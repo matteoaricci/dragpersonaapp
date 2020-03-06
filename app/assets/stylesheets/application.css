@@ -268,3 +268,15 @@
 .login_rounded_button a:hover{
   color: white;
 }
+
+.first-column {
+  width: 50%;
+  padding: 0 10px 0 0;
+  float: left;
+}
+
+.second-column {
+  width: 50%;
+  padding: 0 10px 0 0;
+  float: right;
+}
