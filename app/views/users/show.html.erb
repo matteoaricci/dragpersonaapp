@@ -3,10 +3,11 @@
    <div style="background-color: rgba(236, 158, 158, 0.788); text-align: center; color: white;">
       <br>
       <h1><%= @user.drag_name %></h1>
-      <br>
+      <br><br>
    </div>
    <%= flash.notice %>
-   <div class="user_info" style="color: white;">
+   <br>
+   <div class="user_info first-column" style="color: white;">
       <div>
          <h2>Real Name: <%= @user.name %></h2>
       </div>
@@ -28,6 +29,12 @@
          <h4><%= link_to "Create", new_talent_path %> or <%= link_to "choose", edit_user_path%> some talents</h4>
          <% end %>
          <% end %>
+      </div>
+   </div>
+   <div class="user_info second-column" style="color:white;">
+      <div>
+         <h2>Bio: </h2>
+         <p style="font-size: x-large;"><%= @user.bio %></p>
       </div>
    </div>
 </div>

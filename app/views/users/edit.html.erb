@@ -5,6 +5,8 @@
     <%= f.text_field :name %><br>
     <%= f.label :drag_name, "Drag Name: " %><br>
     <%= f.text_field :drag_name %><br>
+    <%= f.label :bio, "Bio: " %><br>
+    <%= f.text_area :bio %><br>
     <%= f.label :city_id, "City: " %><br>
     <%= f.collection_select :city_id, City.all, :id, :name %><br>
     <%= f.label :talent_ids, "Talents: " %><br>
