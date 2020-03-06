@@ -22,7 +22,7 @@ class MessagesController < ApplicationController
         if @message.valid?
             @message.sender_id = current_user.id
             @message.save
-            redirect_to message_path(@message)
+            redirect_to sent_show_path(@message)
         else
             render new_message_path
         end
