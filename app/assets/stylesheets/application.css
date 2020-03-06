@@ -104,9 +104,19 @@
     border-width: 10px;
   }
 
-  .rounded_button {
+  .login_rounded_button {
     display: block;
     width: 85%;
+    margin: auto;
+    border: none;
+    background-color: rgb(243, 204, 205);
+    padding: 14px 28px;
+    font-size: large;
+  }
+
+  .rounded_button {
+    display: block;
+    width: 35%;
     margin: auto;
     border: none;
     background-color: rgb(243, 204, 205);
@@ -243,4 +253,18 @@
 
 .pink_text {
   color: lightcoral;
+}
+
+.login_rounded_button a:visited{
+  color: rgb(26, 26, 26);
+}
+
+.login_rounded_button a:link{
+  color: rgb(26, 26, 26);
+}
+.login_rounded_button a:active{
+  color: rgb(26, 26, 26);
+}
+.login_rounded_button a:hover{
+  color: white;
 }
