@@ -37,7 +37,8 @@
          <p style="font-size: x-large;"><%= @user.bio %></p>
       </div>
    </div>
-</div>
+   </div>
+
 
 <% if @user == current_user %>
    <nav class="navbar fixed-bottom navbar-light bg-light margins center">
@@ -49,5 +50,5 @@
       <% end %>
    </nav>
 <% else %>
-   <button class="rounded_button margins rounded bottom"><%= link_to "Message Her", new_message_path %></button>
+   <button class="rounded_button bottom center"><%= link_to "Message Her", new_message_path %></button>
 <% end %>
