@@ -44,7 +44,7 @@ class ApplicationController < ActionController::Base
 
     def boot_out
         if logged_in == false
-            flash[:notice] = "You must be logged in."
+            flash[:notice] = "Learn Your Place Sweaty"
             redirect_to login_path
         end
     end

@@ -118,6 +118,10 @@
   background-color: rgba(0, 0, 0, 0.651);
 }
 
+.white {
+  background-color: rgb(29, 29, 29);
+}
+
 .button_pink {
   background-color: rgb(243, 204, 205);
   width: 85%;

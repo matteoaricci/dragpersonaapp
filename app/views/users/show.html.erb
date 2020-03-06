@@ -18,7 +18,7 @@
         <% if @user.talents.any? %>
             <ul>
                 <% @user.talents.each do |talent| %>
-                    <li><%= link_to talent.name, talent_path(talent) %></li>
+                    <div><%= link_to talent.name, talent_path(talent) %></div>
                 <% end %>
             </ul>
         <% else %>
