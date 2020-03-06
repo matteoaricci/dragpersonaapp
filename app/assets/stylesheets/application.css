@@ -32,7 +32,6 @@
      background: url(pink_rice.png);
      background-repeat: repeat;
      
-     
  }
 
  html, body {
@@ -47,6 +46,7 @@
      padding-right: 5%;
      padding-top: 2%;
      font-family: 'Times New Roman', Times, serif;
+   
      
  }
 
@@ -150,8 +150,7 @@
 .login_body {
   background-image: url(aquariabone.jpg);
   background-size: cover;
-  
-  position: relative;
+
 }
 
 .rounded_button a:visited{
