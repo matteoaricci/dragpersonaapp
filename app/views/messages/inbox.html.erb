@@ -1,0 +1,32 @@
+<%= link_to "Back to Profile Page", user_path(current_user) %>
+
+<h1 class="center black_background" style="color: white">Inbox</h1>
+<br>
+<div>
+    <div class="first-column">
+        <h4 class="center">Sent</h4>
+        <hr>
+        <% @counter = 1 %>
+        <p>Total: <%= @sent.length %></p>
+        <% @sent.each do |msg| %>
+            <div>
+                <%= @counter %>. <%= link_to msg.subject, sent_show_path(msg) %>
+            </div>
+            <% @counter += 1 %>
+        <% end %>
+        <button class="rounded rounded_button_small bottom"><%= link_to "All Sent", sent_path %></button>
+    </div>
+    <div class="second-column">
+        <h4 class="center">Recieved</h4>
+        <hr>
+        <% @counter2 = 1 %>
+        <p>Total: <%= @messages.length %></p>
+        <% @messages.each do |msg| %>
+            <div>
+                <%= @counter2 %>. <%= link_to msg.subject, message_path(msg) %>
+            </div>
+            <% @counter2 += 1 %>
+        <% end %>
+        <button class="rounded rounded_button_small bottom"><%= link_to "All Messages", messages_path %></button>
+    </div>
+</div>

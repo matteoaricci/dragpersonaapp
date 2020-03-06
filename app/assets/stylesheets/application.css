@@ -104,9 +104,19 @@
     border-width: 10px;
   }
 
-  .rounded_button {
+  .login_rounded_button {
     display: block;
     width: 85%;
+    margin: auto;
+    border: none;
+    background-color: rgb(243, 204, 205);
+    padding: 14px 28px;
+    font-size: large;
+  }
+
+  .rounded_button {
+    display: block;
+    width: 35%;
     margin: auto;
     border: none;
     background-color: rgb(243, 204, 205);
@@ -118,7 +128,7 @@
   background-color: rgba(0, 0, 0, 0.651);
 }
 
-.white {
+.grey_background {
   background-color: rgb(29, 29, 29);
 }
 
@@ -228,7 +238,7 @@
   width: 10%;
 }
 
-.analytics_columns {
+.two_columns {
   column-count: 2;
   column-gap: 20px;
   column-rule-style: solid;
@@ -243,4 +253,30 @@
 
 .pink_text {
   color: lightcoral;
+}
+
+.login_rounded_button a:visited{
+  color: rgb(26, 26, 26);
+}
+
+.login_rounded_button a:link{
+  color: rgb(26, 26, 26);
+}
+.login_rounded_button a:active{
+  color: rgb(26, 26, 26);
+}
+.login_rounded_button a:hover{
+  color: white;
+}
+
+.first-column {
+  width: 50%;
+  padding: 0 10px 0 0;
+  float: left;
+}
+
+.second-column {
+  width: 50%;
+  padding: 0 10px 0 0;
+  float: right;
 }

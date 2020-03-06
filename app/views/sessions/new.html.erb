@@ -3,7 +3,7 @@
 <br>
 
 <h4 class="pink_text center black_background"><%= flash[:login_warning] %></h4>
-<div class="login_form white">
+<div class="login_form grey_background">
 
     <%= form_tag '/' do %>
         <h4 style="color: pink;"> <%= label_tag :username %>
@@ -16,6 +16,6 @@
     <% end %>
 
     <br>
-    <button class="rounded_button rounded center" ><%= link_to "Make a New Queen", new_user_path %></button>
+    <button class="rounded login_rounded_button center" ><%= link_to "Make a New Queen", new_user_path %></button>
 </div>
 </body>

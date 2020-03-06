@@ -4,6 +4,9 @@ class MessagesController < ApplicationController
 
     def index
         @messages = Message.all.select { |msg| msg.recipient_id == current_user.id }
+        if @messages.length > 4
+            @messages = @messages[-4..-1]
+        end
     end
 
     def show
@@ -23,6 +26,23 @@ class MessagesController < ApplicationController
         else
             render new_message_path
         end
+    end
+
+    def inbox
+        @messages = Message.all.select { |msg| msg.recipient_id == current_user.id }
+        @sent = Message.all.select { |msg| msg.sender_id == current_user.id }
+    end
+
+    def sent
+        @sent = Message.all.select { |msg| msg.sender_id == current_user.id }
+        if @sent.length > 4
+            @sent = @sent[-4..-1]
+        end
+    end
+
+    def sent_show
+        @sent = Message.find(params[:id])
+        @recipient = User.find_by(id: @sent.recipient_id)
     end
 
 
