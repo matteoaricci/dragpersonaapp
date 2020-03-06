@@ -48,5 +48,44 @@ class ApplicationController < ActionController::Base
             redirect_to login_path
         end
     end
+
+    def join
+        @mothers = User.where('admin >= 2')
+        @mother = @mothers.select { |user| user.house_id == params[:id].to_i}
+        @house = House.find(params[:id])
+        @message = Message.create(recipient_id: @mother[0].id, sender_id: current_user.id,
+            subject:"Request to Join", body: "#{current_user.name} has sent a request to join
+            your house.")
+        flash[:notice] = "Your request has been sent."
+        redirect_to houses_path
+    end
+
+    def reject
+        @message = Message.find(params[:id].to_i)
+        @sender = User.find_by(id: @message.sender_id)
+        @recipient = User.find_by(id: @message.recipient_id)
+
+        @message = Message.create(recipient_id: @sender.id, sender_id: @recipient.id,
+        subject:"Request Denied", body: "#{@recipient.name} denied your request to join
+        their house.")
+
+        flash[:notice] = "You successfully rejected the request."
+        redirect_to messages_path
+    end
+
+    def accept
+        @message = Message.find(params[:id].to_i)
+        @sender = User.find_by(id: @message.sender_id)
+        @recipient = User.find_by(id: @message.recipient_id)
+
+        @sender.house_id = @recipient.house_id
+
+        @message = Message.create(recipient_id: @sender.id, sender_id: @recipient.id,
+        subject:"Request Accepted", body: "#{@recipient.name} accepted your request to join
+        their house.")
+
+        flash[:notice] = "You successfully accepted the request."
+        redirect_to messages_path
+    end
     
 end
