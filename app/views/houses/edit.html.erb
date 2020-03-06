@@ -1,16 +1,17 @@
-<h1>Edit House Form</h1>
-
-<%= form_for @house do |h| %>
-    <%= h.label :name %> <br>
-    <%= h.text_field :name %><br>
-    <br>
-    <%= h.label :description %> <br>
-    <%= h.text_area :description %><br>
-    <%= h.label :user_ids, "Add Queens: " %> <br>
-    <%= h.collection_check_boxes :user_ids, User.all, :id, :drag_name %> <br>
-    <br>
-    <%= h.submit class:"rounded_button_small" %>
-
-<% end %>
+<h1>Edit House</h1>
+<hr>
 <br>
-<button class="rounded_button bottom"><%= link_to "Back to House Page", house_path(@house) %></button>
+<%= form_for @house do |f| %>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.label :name %>
+        <%= f.text_field :name, class:"form-control", placeholder:"Name" %>
+      </div>
+      <div class="form-group col-md-6">
+        <%= f.label :description %>
+        <%= f.text_area :description, class:"form-control", placeholder:"Description" %>
+      </div>
+    </div>
+    <br>
+    <button type="submit" class="btn rounded_button">Submit</button>
+<% end %>
